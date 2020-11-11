@@ -30,6 +30,40 @@
   <component name="ChangeListManager">
     <list default="true" id="1f858d7f-f861-42d0-b8d3-52b495022cc3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/main.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/main.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/main.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/atlas.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/atlas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/cat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/displacement.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/mario.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/mino.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/noise.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/build/img/sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/tileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/atlas.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/atlas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/cat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/displacement.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/mario.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/mino.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/noise.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/svg/004-dinosaur.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/svg/009-flamingo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/tileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/helpers/_fonts.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/helpers/_fonts.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/main.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,6 +129,18 @@
       <workItem from="1603287708803" duration="1395000" />
       <workItem from="1603380424318" duration="1198000" />
       <workItem from="1603438216466" duration="706000" />
+      <workItem from="1604910450058" duration="9274000" />
+      <workItem from="1604921042524" duration="1134000" />
+      <workItem from="1604922349010" duration="3794000" />
+      <workItem from="1604928499404" duration="11021000" />
+      <workItem from="1604999905012" duration="10744000" />
+      <workItem from="1605010758427" duration="3419000" />
+      <workItem from="1605014259220" duration="3946000" />
+      <workItem from="1605019768314" duration="1448000" />
+      <workItem from="1605021240578" duration="353000" />
+      <workItem from="1605022220992" duration="1934000" />
+      <workItem from="1605024578803" duration="1930000" />
+      <workItem from="1605086633163" duration="3041000" />
     </task>
     <servers />
   </component>
@@ -139,19 +185,25 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="1982" y="275" width="824" height="519" key="IDE.errors.dialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1602664609952" />
+    <state x="762" y="450" width="376" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605018258457">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="762" y="450" width="376" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605018258457" />
     <state x="2587" y="138" width="585" height="801" key="find.popup" timestamp="1603187550547">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2587" y="138" width="585" height="801" key="find.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1603187550547" />
-    <state x="143" y="247" key="run.anything.popup" timestamp="1603380499595">
+    <state x="143" y="247" width="672" height="677" key="run.anything.popup" timestamp="1605011726169">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="143" y="247" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603380499595" />
+    <state x="143" y="247" width="672" height="677" key="run.anything.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605011726169" />
     <state x="2063" y="247" key="run.anything.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1603198635125" />
-    <state x="142" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1603380497818">
+    <state x="142" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1605011724554">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="142" y="237" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603380497818" />
+    <state x="142" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605011724554" />
     <state x="2062" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1603198634834" />
   </component>
 </project>

@@ -1,236 +1,232 @@
-import * as PIXI from 'pixi.js';
-/*
-import 'pixi-filters';
-*/
-import {TimelineMax} from 'gsap';
+const bg = document.querySelector('.parallax-background');
+const faq = document.querySelector('.faq');
+const faqList = faq.querySelectorAll('.faq-list');
+const faqNav = faq.querySelector('.faq-navigation');
+const nav = document.querySelector('.navigation-wrapper');
+const order = document.querySelector('.order-site');
+const orderTitle = order.querySelector('.order-site__title');
+const orderForm = order.querySelector('.order-site__form');
+const stages = document.querySelector('.stages');
+const moreWorksNavItem = document.querySelectorAll('.more-navigation__item')
+const moreWorksListItem = document.querySelectorAll('.more-list__item')
 
-let app = new PIXI.Application({
-        width: window.innerWidth,         // default: 800
-        height: window.innerHeight,        // default: 600
-        antialias: true,    // default: false
-        transparent: false, // default: false
-        resolution: 1,       // default: 1
-        backgroundColor: 0xFFBB55
-    }
-);
+const tl = new TimelineMax();
 
-document.body.appendChild(app.view);
-
-const loader = PIXI.Loader.shared;
-
-loader
-    .add("img/6.jpg")
-    .load(setup);
-
-function setup() {
-
-        //INITIALIZATION
-        let container = new PIXI.Container();
-        let bgContainer = new PIXI.Container();
-        let textContainer = new PIXI.Container();
-
-        app.stage.addChild(container);
-        container.addChild(bgContainer);
-        container.addChild(textContainer);
-
-        //BACKGROUND STAGE
-        let bg = PIXI.Sprite.from("img/6.jpg");
-
-        bg.width = window.innerWidth;
-        bg.height = window.innerHeight;
-
-        bgContainer.addChild(bg);
-
-        //SHOCKWAVE
-/*
-        bgContainer.filters = [new PIXI.filters.ShockwaveFilter()];
-*/
+tl.fromTo(nav, 1, {y: -100, opacity: 0}, {y:0, opacity: 1}).
+fromTo(stages, 0.5, {x: - window.innerWidth, opacity: 0}, {x: 0, opacity: 1}).
+fromTo(faq, 0.5, {x: window.innerWidth}, {x: 0}).
+fromTo(faqNav, 1, {opacity: 0}, {opacity: 1}).
+fromTo(faqList, 1, {x: -window.innerWidth, opacity: 0}, {x: 0, opacity: 1}).
+fromTo(order, 0.25, {x: window.innerWidth, opacity: 0}, {x: 0, opacity: 1}).
+fromTo(orderTitle, 0.5, {y: -500, opacity: 0}, {y: 0, opacity: 1}).
+fromTo(orderForm, 1, {x: 500, opacity: 0}, {x: 0, opacity: 1});
 
 
-        //TEXT STAGE
-        let basicText = new PIXI.Text('Basic text in pixi', {
-                fontFamily: 'Arial Narrow',
-                fontSize: 136,
-                fontStyle: 'italic',
-                fontWeight: 'bold',
-                fill: '#ffffff',
-                wordWrap: true,
-                wordWrapWidth: 440
-        })
+let menuNav = document.querySelector('.navigation');
+let menuToggle = document.querySelector('.menu')
 
-        basicText.x = -300;
-        basicText.y = 100;
-        basicText.alpha = 0;
+menuToggle.addEventListener('click', function (e) {
+        menuNav.classList.toggle('menu-open');
+        nav.classList.toggle('navigation_open');
+})
 
-        textContainer.addChild(basicText);
+window.addEventListener('scroll', function (e) {
+        let shiftY = window.pageYOffset;
+        let wScroll = window.innerHeight;
 
-        //DISPLACEMENT STAGE
-        let displacementSprite = PIXI.Sprite.from("img/displacement.png");
-        let displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
+        bg.style.top = - shiftY / 5 + 'px' ;
+        if (shiftY === 0) bg.style.top = '0px' ;
 
-        app.stage.addChild(displacementSprite);
+        let services = document.querySelector('.services-group');
+        let servicesItems = services.querySelectorAll('.services');
+        let servicesScroll = services.getBoundingClientRect().top;
+        let servicesFirstItem = services.querySelector('.services-shop');
+        let servicesFirstItemScroll = servicesFirstItem.getBoundingClientRect().top;
+        let servicesVideo = services.querySelector('.video-wrapper');
 
-        displacementFilter.scale.x = 200;
-        displacementFilter.scale.y = 300;
-
-        textContainer.filters = [displacementFilter];
-
-        let tl = new TimelineMax();
-        tl
-/*            .to(shockWave, 3, {time: 1, amplitude: 10})*/
-            .to( displacementFilter.scale, 1, {x: 0.1, y: 0.1})
-            .to(basicText.position, 1, {x: 100}, 0)
-            .to(basicText, 1, {alpha: 1}, 0);
-
-        document.body.addEventListener('click', () => {
-                let tl = new TimelineMax();
-                tl
-                    .to( displacementFilter.scale, 1, {x: 300, y: 200})
-                    .to(basicText.position, 1, {x: 400}, 0)
-                    .to(basicText, 1, {alpha: 0}, 0);
-        });
-}
-
-app.ticker.add(function (delta) {
-});
-
-
-
-/*
-let app = new PIXI.Application({
-        width: window.innerWidth,         // default: 800
-        height: window.innerHeight,        // default: 600
-        antialias: true,    // default: false
-        transparent: false, // default: false
-        resolution: 1,       // default: 1
-        backgroundColor: 0xFFBB55
-    }
-);
-
-document.body.appendChild(app.view);
-
-const loader = PIXI.Loader.shared;
-
-loader
-    .add("img/atlas.json")
-    .load(setup);
-
-function setup () {
-        let id = loader.resources["img/atlas.json"].textures;
-        let mino = new PIXI.Sprite(id["mino.png"]);
-
-        mino.anchor.set(0.5, 0.5);
-        mino.scale.set(0.5);
-
-        mino.x = window.innerWidth / 2;
-        mino.y = window.innerHeight / 2;
-        app.stage.addChild(mino);
-
-        let box = new PIXI.Graphics();
-        box.beginFill(0xccff99);
-        box.drawRect(0,0,75, 75);
-        box.endFill();
-        box.x = 250;
-        box.y = 250;
-        app.stage.addChild(box);
-
-        app.ticker.add((delta) => {
-                if (hitTestRectangle(mario, mino)) {
-                        /!*box.tint = 0xff3300;*!/
-                        mino.scale.set(0.6);
-                } else {
-                        mino.scale.set(0.5);
+        if (wScroll > servicesScroll) {
+                for (let i = 0; i < servicesItems.length; i++) {
+                        setTimeout(function () {
+                                servicesItems[i].classList.add("show");
+                        }, 400 * (i + 1));
                 }
-        });
-
-
-        let mario = new PIXI.Sprite(id["mario.png"]);
-
-        mario.anchor.set(0.5, 0.5);
-        mario.scale.set(0.25);
-
-        mario.x = 300;
-        mario.y = window.innerHeight / 2;
-        app.stage.addChild(mario);
-
-        app.ticker.add((delta) => {
-                mario.rotation -= delta * 0.1;
-        });
-        app.stage.interactive = true;
-        app.stage.on("pointermove", moveMario);
-
-        function moveMario(e) {
-                let pos = e.data.global;
-
-                mario.x = pos.x;
-                mario.y = pos.y;
         }
 
-        document.addEventListener("keydown", function () {
-                if (event.keyCode == 37) {
-                        mino.x -= 15;
+        const worksSection = document.querySelector('.works');
+        const worksItems = worksSection.querySelectorAll('.works__item');
+        const worksScroll = worksSection.getBoundingClientRect().top;
+
+        if (wScroll > worksScroll) {
+                for (let i = 0; i < worksItems.length; i++) {
+                        setTimeout(function () {
+                                worksItems[i].classList.add("show");
+                        }, 350 * (i + 1));
                 }
-                if (event.keyCode == 38) {
-                        mino.y -= 15;
-                }
-                if (event.keyCode == 39) {
-                        mino.x += 15;
-                }
-                if (event.keyCode == 40) {
-                        mino.y += 15;
-                }
-        });
+        }
 
-}
+        if (wScroll > servicesFirstItemScroll) {
+                servicesFirstItem.style.overflow = 'visible';
+                servicesVideo.style.animation = 'show 1s ease forwards';
+        }
 
-function hitTestRectangle(r1, r2) {
+        let navHeight = nav.clientHeight;
 
-        //Define the variables we'll need to calculate
-        let hit, combinedHalfWidths, combinedHalfHeights, vx, vy;
-
-        //hit will determine whether there's a collision
-        hit = false;
-
-        //Find the center points of each sprite
-        r1.centerX = r1.x + r1.width / 2;
-        r1.centerY = r1.y + r1.height / 2;
-        r2.centerX = r2.x + r2.width / 2;
-        r2.centerY = r2.y + r2.height / 2;
-
-        //Find the half-widths and half-heights of each sprite
-        r1.halfWidth = r1.width / 2;
-        r1.halfHeight = r1.height / 2;
-        r2.halfWidth = r2.width / 2;
-        r2.halfHeight = r2.height / 2;
-
-        //Calculate the distance vector between the sprites
-        vx = r1.centerX - r2.centerX;
-        vy = r1.centerY - r2.centerY;
-
-        //Figure out the combined half-widths and half-heights
-        combinedHalfWidths = r1.halfWidth + r2.halfWidth;
-        combinedHalfHeights = r1.halfHeight + r2.halfHeight;
-
-        //Check for a collision on the x axis
-        if (Math.abs(vx) < combinedHalfWidths) {
-
-                //A collision might be occurring. Check for a collision on the y axis
-                if (Math.abs(vy) < combinedHalfHeights) {
-
-                        //There's definitely a collision happening
-                        hit = true;
-                } else {
-
-                        //There's no collision on the y axis
-                        hit = false;
-                }
+        if (shiftY >= navHeight) {
+                nav.classList.add('navigation_fixed');
         } else {
-
-                //There's no collision on the x axis
-                hit = false;
+                nav.classList.remove('navigation_fixed');
         }
+})
 
-        //`hit` will be either `true` or `false`
-        return hit;
+for (let i = 0; i < moreWorksNavItem.length; i++){
+        moreWorksNavItem[i].addEventListener('click', function (e) {
+                Array.from(moreWorksListItem).forEach(item => {
+                        item.classList.remove('active')
+                })
+                moreWorksListItem[i].classList.add('active');
+        })
 }
-*/
+
+const stagesNav = document.querySelector('.stages-navigation');
+const stagesNavItem = document.querySelectorAll('.stages-navigation__link');
+const stagesHeroList = document.querySelectorAll('.hero-stages');
+
+const stagesHeroVideoItem = document.querySelectorAll('.hero-stages__video-item');
+const stagesHeroListItems = document.querySelectorAll('.stages-list__item');
+
+for (let i = 0; i < stagesNavItem.length; i++){
+        stagesNavItem[i].addEventListener('click', function (e) {
+                Array.from(stagesHeroList).forEach(item => {
+                        item.classList.remove('stages_active')
+                })
+                stagesHeroList[i].classList.add('stages_active');
+                stagesHeroVideoItem[0].classList.add('video-item--active');
+                /*if (!stagesHeroVideoItem[0].classList.contains('video-item--active')) {
+                    stagesHeroVideoItem[0].style.opacity = 0;
+                    stagesHeroVideoItem[0].style.visibility = 'hidden';
+
+                }*/
+        })
+}
+
+for (let i = 0; i < stagesHeroListItems.length; i++){
+        stagesHeroListItems[i].addEventListener('click', function (e) {
+                Array.from(stagesHeroVideoItem).forEach(item => {
+                        item.classList.remove('video-item--active')
+                })
+                stagesHeroVideoItem[i].classList.add('video-item--active');
+        })
+}
+
+const faqNavItem = document.querySelectorAll('.faq-navigation__item');
+const faqHeroList = document.querySelectorAll('.faq-list__item');
+
+for (let i = 0; i < faqNavItem.length; i++){
+        faqNavItem[i].addEventListener('click', function (e) {
+                const target = e.target;
+
+                Array.from(faqHeroList).forEach(item => {
+                        item.classList.remove('faq_active')
+                })
+                faqHeroList[i].classList.add('faq_active');
+        })
+}
+
+const modalWrapper = document.querySelectorAll('.modal');
+const modalOrder = document.querySelector('.modal--order');
+const modalConsultation = document.querySelector('.modal--consultation');
+const orderBtn = document.querySelectorAll('.services__link');
+const consultationBtn = document.querySelectorAll('.btn--consultation');
+const closeBtn = document.querySelectorAll('.btn--close');
+
+orderBtn.forEach(item => {
+        item.addEventListener('click',() => {
+                    modalOrder.classList.toggle('modal--active');
+                    document.body.classList.add('scroll--hidden')
+            }
+        )
+})
+
+consultationBtn.forEach(item => {
+        item.addEventListener('click',() => {
+                    modalConsultation.classList.toggle('modal--active');
+                    document.body.classList.add('scroll--hidden')
+            }
+        )
+})
+
+// Get the modal
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+        modalWrapper.forEach(item => {
+                if (event.target === item) {
+                        item.classList.remove('modal--active');
+                        document.body.classList.remove('scroll--hidden')
+                }
+        })
+}
+
+closeBtn.addEventListener('click', (e) => {
+        modalWrapper.forEach(item => {
+                if (e.target === item) {
+                        item.classList.remove('modal--active');
+                        document.body.classList.remove('scroll--hidden')
+                }
+        })
+})
+
+
+const $bigBall = document.querySelector('.cursor__ball-big');
+const $smallBall = document.querySelector('.cursor__ball-small');
+const $hoverables = document.querySelectorAll('.hoverable');
+
+// Listeners
+document.body.addEventListener('mousemove', onMouseMove);
+for (let i = 0; i < $hoverables.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+        $hoverables[i].addEventListener('mouseenter', onMouseHover);
+        $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+}
+// Move the cursor
+window.CP.exitedLoop(0);
+
+function onMouseMove(e) {
+        TweenMax.to($bigBall, .25, {
+                x: e.pageX - 15,
+                y: e.pageY - 15 });
+
+        TweenMax.to($smallBall, .05, {
+                x: e.pageX - 5,
+                y: e.pageY - 7 });
+}
+// Hover an element
+function onMouseHover() {
+        TweenMax.to($bigBall, .3, {
+                scale: 4 });
+}
+
+function onMouseHoverOut() {
+        TweenMax.to($bigBall, .3, {
+                scale: 1 });
+}
+
+/*const showBlock = (someArray, someItem, someActive) => {
+
+        const cArray = document.querySelectorAll(`${someArray}`);
+        const cItem = document.querySelectorAll(`${someItem}`);
+
+        console.log(cArray);
+        console.log(cItem);
+
+        for (let i = 0; i < cArray.length; i++){
+                cArray[i].addEventListener('click', function (e) {
+
+                        Array.from(cItem).forEach(item => {
+                                item.classList.remove(`${someActive}`)
+                        })
+                        cItem[i].classList.add(`${someActive}`);
+                })
+                console.log(cItem);
+        }
+}
+
+showBlock('.more-navigation__item', '.more-list__item', 'active');*/

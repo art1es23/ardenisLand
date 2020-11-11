@@ -60,7 +60,7 @@ const htmlInclude =  () => {
 }
 
 const imgMove = () => {
-    return src(['./src/img/*.jpg', './src/img/*.jpeg', './src/img/*.png', './src/img/*.json'])
+    return src(['./src/img/*.webp', './src/img/*.jpg', './src/img/*.jpeg', './src/img/*.png', './src/img/*.json'])
         .pipe(dest('./build/img/'));
 }
 
@@ -77,8 +77,8 @@ const svgSprites = () => {
 }
 
 const resourcesMove = () => {
-    return src('./src/resources/**')
-        .pipe(dest('./build/'));
+    return src('./src/res/**')
+        .pipe(dest('./build/res/'));
 }
 
 const fonts = () => {
@@ -209,7 +209,7 @@ const server = () => {
     watch('./src/*.html', htmlInclude);
     watch('./src/img/**', imgMove);
     watch('./src/img/svg/*.svg', svgSprites);
-    watch('./src/resources/**', resourcesMove);
+    watch('./src/res/**', resourcesMove);
     watch('./src/fonts/**', fonts);
     watch('./src/fonts/**', fontsStyle);
     watch('./src/js/**/*.js', scripts);
@@ -232,7 +232,7 @@ exports.default = series(clean, parallel(htmlInclude, scripts, imgMove), styles,
 exports.default = series(clean, parallel(htmlInclude, scripts, fonts, imgMove, svgSprites, resourcesMove), fontsStyle, styles, server);
 
 const tinyImages = () => {
-    return src('images/src/**/*.{png,jpg,jpeg}')
+    return src('img/src/**/*.{webp,png,jpg,jpeg}')
         .pipe(tinyPNG({
             key: 'mpV6rftBN8Fc0cCB7LknY5y4ZfbyrPjc',
             log: true,
@@ -262,8 +262,15 @@ const scriptsProduction = () => {
                 ]
             }
         }))
+        .on('error', function (err) {
+            console.error('WEBPACK ERROR', err);
+            this.emit('end'); // Don't stop the rest of the task
+        })
+        .pipe(sourcemaps.init())
         .pipe(uglify().on("error", notify.onError()))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('./build/js/'))
+        .pipe(browserSync.stream());
 }
 
 const  stylesProduction = () => {
@@ -286,4 +293,5 @@ const  stylesProduction = () => {
         .pipe(gulp.dest('./build/css/'))
 }
 
+exports.tinyImg = tinyImages;
 exports.product = series(clean, parallel(htmlInclude, scriptsProduction, fonts, imgMove, svgSprites, resourcesMove), fontsStyle, stylesProduction, server, tinyImages);

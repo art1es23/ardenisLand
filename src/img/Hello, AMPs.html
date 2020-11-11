@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hello, AMPs</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+</head>
+<body><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.12'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball-big ">
+            <svg height="50" width="50">
+                <circle cx="25" cy="25" r="25" stroke-width="0"></circle>
+            </svg>
+        </div>
+
+        <div class="cursor__ball cursor__ball-small">
+            <svg height="25" width="25">
+                <circle cx="15" cy="15" r="8" stroke-width="0"></circle>
+            </svg>
+        </div>
+    </div>
+    <header class="header" id="header">
+        <nav class="navigation-wrapper">
+            <a href="#" class="logo">
+                <svg class="main-logo" fill="rgb(255, 255, 255)">
+                    <use xlink:href="./img/sprite.svg#logo"></use>
+                </svg>
+
+            </a>
+            <div class="menu">
+                <span class="menu-global menu-top"></span>
+                <span class="menu-global menu-middle"></span>
+                <span class="menu-global menu-bottom"></span>
+            </div>
+            <ul class="navigation">
+                <li class="navigation__item">
+                    <a href="" class="navigation__link"><span>Послуги</span></a>
+                </li>
+                <li class="navigation__item">
+                    <a href="" class="navigation__link"><span>Портфоліо</span></a>
+                </li>
+                <li class="navigation__item">
+                    <a href="" class="navigation__link"><span>Блог</span></a>
+                </li>
+                <li class="navigation__item">
+                    <a href="" class="navigation__link"><span>Про нас</span></a>
+                </li>
+                <li class="navigation__item">
+                    <a href="" class="navigation__link"><span>Контакти</span></a>
+                </li>
+            </ul>
+            <div class="contacts">
+                <a href="tel:+380965664546" class="contacts__phone">+38(096)5664546</a>
+                <a href="email:dreamwinamounts@gmail.com" class="contacts__email">dreamwinamounts@gmail.com</a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <h2 class="hero__title title">Створення сайтів</h2>
+            <div class="hero__slides">
+                <p class="hero__caption">з проробленою структурою</p>
+                <p class="hero__description">Ваш сайт буде інтуїтивно зрозумілий будь-якому користувачеві</p>
+            </div>
+            <!--        <div class="hero__slides">
+                      <p class="hero__caption"></p>
+                      <p class="hero__description"></p>
+                    </div>
+                    <div class="hero__slides">
+                      <p class="hero__caption"></p>
+                      <p class="hero__description"></p>
+                    </div>
+                    <div class="hero__slides">
+                      <p class="hero__caption"></p>
+                      <p class="hero__description"></p>
+                    </div>-->
+
+            <a href="" class="hero__link link"><span>Отримати консультацію</span></a>
+        </section>
+
+        <div class="parallax">
+            <picture class="parallax-background">
+                <source srcset="./img/parallax_background.webp" type="image/webp">
+                <source srcset="./img/parallax_background.png" type="image/png">
+                <img src="./img/parallax_background.webp" alt="">
+            </picture>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="services-group section" id="services-group">
+            <div class="container">
+
+                <h2 class="services-group__title">Реалізуємо відповідне рішення для вашого бізнесу</h2>
+
+                <div class="services-group-wrapper">
+                    <div class="services-group__item services services-shop">
+                        <div class="services__icon site-shop">
+                            <svg class="">
+                                <use xlink:href="./img/sprite.svg#speed"></use>
+                            </svg>
+                        </div>
+                        <h3 class="services__title">Інтернет-магазин</h3>
+                        <p class="services__description">Від декількох товарів до великих
+                            каталогів продукції - створення сайту
+                            для бізнесу будь-якого масштабу.
+                            Мета сайту - продаж товарів
+                            вашої компанії через інтернет (Ecommerce).
+                        </p>
+                        <ul class="services__list-menu">
+                            <li>адаптивний дизайн і верстка;</li>
+                            <li>зручна система управління сайтом;</li>
+                            <li>відображення сайту в будь-якому браузері;</li>
+                            <li>зрозуміла структура сайта;</li>
+                            <li>базове просування сайту;</li>
+                            <li>підключаємо на сайт сервіси прийому платежів;</li>
+                        </ul>
+                        <a href="" class="services__link">
+                            <span>Замовити</span>
+                        </a>
+
+                        <div class="video-wrapper">
+                            <div class="video__photo-back">
+                                <video loop muted autoplay>
+                                    <source src="./res/production%20ID_4761736.webm" type='video/webm; codecs="vp8, vorbis"'>
+                                    <source src="./res/production%20ID_4761736.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services-group__item services">
+                        <div class="services__icon site-features">
+                            <svg class="">
+                                <use xlink:href="./img/sprite.svg#web"></use>
+                            </svg>
+                        </div>
+                        <h3 class="services__title">Сайт послуг</h3>
+                        <p class="services__description">Такий сайт необхідний, якщо ви надаєте послуги для іншого бізнесу (B2B) або кінцевого клієнта (B2C).</p>
+                        <p class="services__description">Мета сайту - залучення клієнтів з мережі.</p>
+                        <ul class="services__list-menu">
+                            <li>адаптивний дизайн і верстка;</li>
+                            <li>зручна система управління сайтом;</li>
+                            <li>відображення сайту в будь-якому браузері;</li>
+                            <li>зрозуміла структура сайта;</li>
+                            <li>базове просування сайту;</li>
+                        </ul>
+                        <a href="" class="services__link">
+                            <span>Замовити</span>
+                        </a>
+                    </div>
+
+                    <div class="services-group__item services">
+                        <div class="services__icon site-corporation">
+                            <svg class="">
+                                <use xlink:href="./img/sprite.svg#web-site"></use>
+                            </svg>
+                        </div>
+                        <h3 class="services__title">Корпоративний сайт</h3>
+                        <p class="services__description">Необхідний, якщо вам важливо бути присутнім в інтернеті.</p>
+                        <p class="services__description">Мета сайту - публікація новин / подій,
+                            розміщення інформації для відвідувачів
+                            (В тому числі для співробітників компанії і бізнес-партнерів).</p>
+                        <ul class="services__list-menu">
+                            <li>адаптивний дизайн і верстка;</li>
+                            <li>зручна система управління сайтом;</li>
+                            <li>відображення сайту в будь-якому браузері;</li>
+                            <li>зрозуміла структура сайта;</li>
+                            <li>базове просування сайту;</li>
+                        </ul>
+                        <a href="" class="services__link">
+                            <span>Замовити</span>
+                        </a>
+                    </div>
+
+                    <div class="services-group__item services">
+                        <div class="services__icon site-landing">
+                            <svg class="">
+                                <use xlink:href="./img/sprite.svg#camping"></use>
+                            </svg>
+                        </div>
+                        <h3 class="services__title">Landing page</h3>
+                        <p class="services__description">Потрібен, якщо ви пропонуєте один продукт (послугу).</p>
+                        <p class="services__description">Максимально розкриває вигоду і переваги товару / послуги.</p>
+                        <p class="services__description">Мета сайту - збір контактних даних потенційних покупців.</p>
+                        <ul class="services__list-menu">
+                            <li>адаптивний дизайн і верстка;</li>
+                            <li>зручна система управління сайтом;</li>
+                            <li>відображення сайту в будь-якому браузері;</li>
+                            <li>зрозуміла структура сайта;</li>
+                            <li>аналіз попиту і конкурентів;</li>
+                        </ul>
+                        <a href="" class="services__link">
+                            <span>Замовити</span>
+                        </a>
+                    </div>
+
+                    <div class="services-group__item services">
+                        <div class="services__icon site-visit">
+                            <svg class="">
+                                <use xlink:href="./img/sprite.svg#website"></use>
+                            </svg>
+                        </div>
+                        <h3 class="services__title">Сайт-візитка</h3>
+                        <p class="services__description">Найважливіша інформація про вашу компанії на кількох сторінках.</p>
+                        <p class="services__description">Мета сайту - зацікавити потенційних клієнтів і партнерів.</p>
+                        <ul class="services__list-menu">
+                            <li>адаптивний дизайн і верстка;</li>
+                            <li>зручна система управління сайтом;</li>
+                            <li>відображення сайту в будь-якому браузері;</li>
+                            <li>базове просування сайту;</li>
+                        </ul>
+                        <a href="" class="services__link">
+                            <span>Замовити</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works section">
+            <div class="container">
+
+                <h2 class="works__title">Наші роботи</h2>
+                <div class="works-wrapper">
+
+                    <article class="works__item works-group">
+                        <a href="" class="works-group__preview preview1">
+                            <picture>
+                                <source srcset="./img/pexels-photo-5180492.webp" type="image/webp">
+                                <source srcset="./img/pexels-photo-5180492.jpeg" type="image/png">
+                                <img src="./img/pexels-photo-5180492.webp" alt="">
+                            </picture>
+                        </a>
+                        <a href=""><h3 class="works-group__title">Lorem ipsum dolor.</h3></a>
+                        <p class="works-group__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit molestiae numquam reiciendis similique sit? Consequatur expedita maiores tenetur voluptate. Ipsam.</p>
+                    </article>
+
+                    <article class="works__item works-group">
+                        <a href="" class="works-group__preview preview2">
+                            <picture>
+                                <source srcset="./img/pexels-photo-2552127.webp" type="image/webp">
+                                <source srcset="./img/pexels-photo-2552127.jpeg" type="image/png">
+                                <img src="./img/pexels-photo-2552127.webp" alt="">
+                            </picture>
+                        </a>
+                        <a href=""><h3 class="works-group__title">Lorem ipsum dolor.</h3></a>
+                        <p class="works-group__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolor iste minus officiis quae, quas reprehenderit similique tempora vel vitae?</p>
+                    </article>
+
+                    <article class="works__item works-group">
+                        <a href="" class="works-group__preview preview3">
+                            <picture>
+                                <source srcset="./img/pexels-photo-3771127.webp" type="image/webp">
+                                <source srcset="./img/pexels-photo-377112.jpeg" type="image/png">
+                                <img src="./img/pexels-photo-377112.webp" alt="">
+                            </picture>
+                        </a>
+                        <a href=""><h3 class="works-group__title">Lorem ipsum dolor.</h3></a>
+                        <p class="works-group__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur, blanditiis ducimus minima omnis porro quae quo quod rerum sed?</p>
+                    </article>
+
+                    <article class="works__item works-group">
+                        <a href="" class="works-group__preview preview4">
+                            <picture>
+                                <source srcset="./img/pexels-photo-5474038.webp" type="image/webp">
+                                <source srcset="./img/pexels-photo-5474038.jpeg" type="image/png">
+                                <img src="./img/pexels-photo-5474038.webp" alt="">
+                            </picture></a>
+                        <a href=""><h3 class="works-group__title">Lorem ipsum dolor.</h3></a>
+                        <p class="works-group__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto at et labore laborum, quasi quod rem tempora vel vero?</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="stages" class="stages section">
+            <div class="stages_top">
+                <h2 class="stages__title">Етапи створення сайту</h2>
+                <a href="" class="stages__link link">Отримати консультацію</a>
+            </div>
+            <ul class="stages-navigation">
+                <li class="stages-navigation__item"><a class="stages-navigation__link" data-index="1"><span>Дизайн</span></a></li>
+                <li class="stages-navigation__item"><a class="stages-navigation__link" data-index="1"><span>Аналіз попиту</span></a></li>
+                <li class="stages-navigation__item"><a class="stages-navigation__link" data-index="1"><span>Аналіз конкурентів</span></a></li>
+                <li class="stages-navigation__item"><a class="stages-navigation__link" data-index="1"><span>Контент</span></a></li>
+                <li class="stages-navigation__item"><a class="stages-navigation__link" data-index="1"><span>Прототип</span></a></li>
+                <li class="stages-navigation__item"><a class="stages-navigation__link" data-index="1"><span>Верстка</span></a></li>
+                <li class="stages-navigation__item"><a class="stages-navigation__link" data-index="1"><span>Программінг</span></a></li>
+            </ul>
+
+            <div class="stages-all">
+                <div class="stages-wrapper hero-stages stages_active">
+                    <div class="hero-stages__description">
+                        <h3 class="hero-stages__title">Дизайн</h3>
+                        <ul class="hero-stages__list-menu stages-list">
+                            <li class="stages-list__item">Наші професійні дизайнери зроблять для Вашого сайту найкращий дизайн</li>
+                            <li class="stages-list__item">При необхідності розробимо лого, фірмовий стиль, яка супроводжує графіком - все що важливо для залучення клієнтів.</li>
+                        </ul>
+                    </div>
+                    <div class="hero-stages__video">
+                        <picture class="hero-stages__video-item">
+                            <source srcset="./img/design1.webp" type="image/webp">
+                            <source srcset="./img/design1.jpg" type="image/png">
+                            <img src="./img/design1.webp" alt="">
+                        </picture>
+
+                        <picture class="hero-stages__video-item">
+                            <source srcset="./img/design2.webp" type="image/webp">
+                            <source srcset="./img/design2.jpg" type="image/png">
+                            <img src="./img/design2.webp" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="stages-wrapper hero-stages">
+                    <div class="hero-stages__description">
+                        <h3 class="hero-stages__title">Аналіз попиту</h3>
+                        <ul class="hero-stages__list-menu stages-list">
+                            <li class="stages-list__item">Вивчаємо наміри користувачів в Яндекс і Google</li>
+                            <li class="stages-list__item">Перевіряємо попит на сезонність</li>
+                            <li class="stages-list__item">Досліджуємо запити на "коммерцілізацію" (частку комерційних результатів) і "геозалежні" (тобто на відсутність або наявність географічної прив'язки, наприклад – до Києва чи до Одеси)</li>
+                        </ul>
+                    </div>
+                    <div class="hero-stages__video">
+                        <video class="hero-stages__video-item video-item--active" playsinline autoplay muted loop>
+                            <source src="./res/anSprosa.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/anSprosa.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                        <video class="hero-stages__video-item" playsinline autoplay muted loop>
+                            <source src="./res/anSprosa2.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/anSprosa2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                        <video class="hero-stages__video-item" playsinline autoplay muted loop>
+                            <source src="./res/anSprosa3.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/anSprosa3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                    </div>
+                </div>
+                <div class="stages-wrapper hero-stages">
+                    <div class="hero-stages__description">
+                        <h3 class="hero-stages__title">Аналіз конкурентів</h3>
+                        <ul class="hero-stages__list-menu stages-list">
+                            <li class="stages-list__item">Аналізуємо ТОП-10 сайтів конкурентів на seo-параметри (скоринг)</li>
+                            <li class="stages-list__item">Вивчаємо трафік сайтів конкурентів (звідки, скільки, на які сторінки)</li>
+                            <li class="stages-list__item">Досліджуємо структуру і контент сайтів конкурентів</li>
+                            <li class="stages-list__item">Перевіряємо, по яких запитах конкуренти збирають трафік</li>
+                        </ul>
+                    </div>
+                    <div class="hero-stages__video">
+                        <video class="hero-stages__video-item video-item--active" playsinline autoplay muted loop>
+                            <source src="./res/anKonk1.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/anKonk1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                        <video class="hero-stages__video-item" playsinline autoplay muted loop>
+                            <source src="./res/anKonk2.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/anKonk2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                        <video class="hero-stages__video-item" playsinline autoplay muted loop>
+                            <source src="./res/anKonk3.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/anKonk3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                        <video class="hero-stages__video-item" playsinline autoplay muted loop>
+                            <source src="./res/anKonk4.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/anKonk4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                    </div>
+                </div>
+                <div class="stages-wrapper hero-stages">
+                    <div class="hero-stages__description">
+                        <h3 class="hero-stages__title">Контент</h3>
+                        <ul class="hero-stages__list-menu stages-list">
+                            <li class="stages-list__item">На основі семантичного ядра поставимо ТЗ на тексти (знаючи заздалегідь кількість символів, ми максимально ефективно спакуємо текст в дизайн)</li>
+                            <li class="stages-list__item">Почнемо готувати фото і картинки (зробимо самі або підберемо на стоках і узгодимо з вами)</li>
+                            <li class="stages-list__item">Зробимо ілюстрації, інфографіку, таблиці, креслення, іконки (при необхідності)</li>
+                        </ul>
+                    </div>
+                    <div class="hero-stages__video">
+                        <video class="hero-stages__video-item video-item--active" playsinline autoplay muted loop>
+                            <source src="./res/content.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/content.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                        <video class="hero-stages__video-item" playsinline autoplay muted loop>
+                            <source src="./res/Pexels%20Videos%201093664.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/Pexels%20Videos%201093664.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                        <picture class="hero-stages__video-item video-item--active">
+                            <source srcset="./img/content3.webp" type="image/webp">
+                            <source srcset="./img/content3.png" type="image/png">
+                            <img src="./img/content3.webp" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="stages-wrapper hero-stages">
+                    <div class="hero-stages__description">
+                        <h3 class="hero-stages__title">Прототип</h3>
+                        <ul class="hero-stages__list-menu stages-list">
+                            <li class="stages-list__item">Mobile First (з урахуванням зростання "мобільних" користувачів, а так само підвищеною увагою Google до мобільних версіями, ми починаємо робити сайти з мобільної версії)</li>
+                            <li class="stages-list__item">Додамо інтерактив (зробимо "клікабельним" прототип вашого сайту у вигляді html-сторінок)</li>
+                        </ul>
+                    </div>
+                    <div class="hero-stages__video">
+                        <video class="hero-stages__video-item video-item--active" playsinline autoplay muted loop>
+                            <source src="./res/prototype.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/prototype.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                        <video class="hero-stages__video-item" playsinline autoplay muted loop>
+                            <source src="./res/prototype2.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/prototype2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                    </div>
+                </div>
+                <div class="stages-wrapper hero-stages">
+                    <div class="hero-stages__description">
+                        <h3 class="hero-stages__title">Верстка</h3>
+                        <ul class="hero-stages__list-menu stages-list">
+                            <li class="stages-list__item">Коректно відобразимо на будь-яких дозволах дисплеїв і в будь-яких браузерах</li>
+                            <li class="stages-list__item">PageSpeed Insights (збільшимо швидкість завантаження сторінок за рекомендаціями сервісу Google, що позитивно вплине на подальше просування)</li>
+                        </ul>
+                    </div>
+                    <div class="hero-stages__video">
+                        <picture class="hero-stages__video-item video-item--active">
+                            <source srcset="./img/verstka.webp" type="image/webp">
+                            <source srcset="./img/verstka.png" type="image/png">
+                            <img src="./img/verstka.webp" alt="">
+                        </picture>
+                        <picture class="hero-stages__video-item">
+                            <source srcset="./img/verstka2.webp" type="image/webp">
+                            <source srcset="./img/verstka2.png" type="image/png">
+                            <img src="./img/verstka2.webp" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="stages-wrapper hero-stages">
+                    <div class="hero-stages__description">
+                        <h3 class="hero-stages__title">Программінг</h3>
+                        <ul class="hero-stages__list-menu stages-list">
+                            <li class="stages-list__item">Створення шаблону CMS (Wordpress, Opencart)</li>
+                            <li class="stages-list__item">Підключимо на сайт системи платежів, онлайн-чат, колл-трекінг, лічильники статистики і т.д.)</li>
+                        </ul>
+                    </div>
+                    <div class="hero-stages__video">
+                        <picture class="hero-stages__video-item video-item--active">
+                            <source srcset="./img/verstka2.webp" type="image/webp">
+                            <source srcset="./img/verstka2.webp" type="image/png">
+                            <img src="./img/verstka2.webp" alt="">
+                        </picture>
+                        <video class="hero-stages__video-item" playsinline autoplay muted loop>
+                            <source src="./res/Pexels%20Videos%201093664.webm" type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="./res/Pexels%20Videos%201093664.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="phase" class="phase">
+            <div class="container">
+                <h2 class="phase__title">Графік створення проектів</h2>
+                <div class="phase-wrapper">
+                    <picture>
+                        <source srcset="./img/etap_site.webp" type="image/webp">
+                        <source srcset="./img/etap_site.png" type="image/png">
+                        <img src="./img/etap_site.webp" alt="">
+                    </picture>
+                </div>
+                <div class="phase__description">
+                    <p>Для створення сайта з нуля потрібно близько двух місяців.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="moreUs" class="more">
+            <div class="container">
+                <div class="more-wrapper">
+                    <h2 class="more__title">А ще ми робимо..</h2>
+                    <ul class="more-navigation">
+                        <li class="more-navigation__item"><span>Брендбуки</span></li>
+                        <li class="more-navigation__item"><span>Фірмовий стиль</span></li>
+                        <li class="more-navigation__item"><span>Дизайн поліграфії</span></li>
+                    </ul>
+                    <div class="more-list">
+                        <article class="more-list__item active">
+                            <a>
+                                <picture>
+                                    <source srcset="./img/pexels-photo-5473952.webp" type="image/webp">
+                                    <source srcset="./img/pexels-photo-5473952.jpeg" type="image/jpeg">
+                                    <img src="./img/pexels-photo-5473952.webp" alt="">
+                                </picture>
+                            </a>
+                        </article>
+                        <article class="more-list__item">
+                            <a>
+                                <picture>
+                                    <source srcset="./img/pexels-photo-4709287.webp" type="image/webp">
+                                    <source srcset="./img/pexels-photo-4709287.jpeg" type="image/jpeg">
+                                    <img src="./img/pexels-photo-4709287.webp" alt="">
+                                </picture>
+                            </a>
+
+                        </article>
+                        <article class="more-list__item">
+                            <a>
+                                <picture>
+                                    <source srcset="./img/pexels-photo-5474031.webp" type="image/webp">
+                                    <source srcset="./img/pexels-photo-5474031.jpeg" type="image/jpeg">
+                                    <img src="./img/pexels-photo-5474031.webp" alt="">
+                                </picture>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq section">
+
+            <div class="faq-wrapper">
+                <h2 class="faq__title">F.A.Q.</h2>
+                <ul class="faq-navigation">
+                    <li class="faq-navigation__item">Працюємо за договором</li>
+                    <li class="faq-navigation__item">Оплата</li>
+                    <li class="faq-navigation__item">Як я можу контролювати проект?</li>
+                    <li class="faq-navigation__item">Працюємо по Україні</li>
+                </ul>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-list__item faq-description faq_active">
+                    <p>Всі проекти оформляються юридично. До договору обов'язково прикріплюється додаток з вартістю, графік виконання та оплати робіт, наші гарантійні зобов'язання та штрафні санкції. Нам не вигідно робити свою роботу повільно і погано, і договір тому підтвердження.</p>
+                </div>
+                <div class="faq-list__item faq-description">
+                    <p>Ми працюємо за безготівковим та готівковим розрахунком. Договір завжди передбачає внесення передоплати, що є гарантією взаємної відповідальності за проект. Інші етапи оплати регулюються графіком платежів, прив'язаним до етапів створення сайту, а остаточний розрахунок завжди відбувається після завершення проекту.</p>
+                </div>
+                <div class="faq-list__item faq-description">
+                    <p>Будь-який проект, навіть створення невеликої посадкової сторінки - це десяток етапів технічної та творчої роботи, яка вимагає взаємної залученості. Тому ми завжди дотримуємося принципів відкритості і рекомендуємо вам брати участь в роботі онлайн, за допомогою програм ведення проектів: Trello, або Jira.</p>
+                </div>
+                <div class="faq-list__item faq-description">
+                    <p>В ході проектів основні комунікації з клієнтом здійснюються онлайн або по телефону, тому віддаленість не впливає на терміни реалізації та якість проекту, що підтверджено досвідом взаємодії з компаніями по всій Україні: від Львова до Харкова.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="clients" class="clients">
+            <div class="container">
+                <div class="clients-wrapper">
+                    <h2 class="clients__title">Our clients</h2>
+                    <section class="customer-logos slider">
+                        <a class="slide"><img src="./img/pexels-photo-2552127.jpeg"></a>
+                        <a class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></a>
+                        <a class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></a>
+                        <a class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></a>
+                        <a class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></a>
+                        <a class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></a>
+                        <a class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></a>
+                        <a class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></a>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="order-site">
+            <div class="container">
+                <div class="order-site__wrapper">
+                    <h2 class="order-site__title">Замовити створення та просування сайту:</h2>
+                    <form class="order-site__form" action="">
+                        <input type="text" name="name" placeholder="Ваше імʼя:">
+                        <input type="tel" name="phoneNumber" placeholder="Ваш контактний телефон:">
+                        <input type="button" value="Замовити">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <!--<a class="footer__logo">
+                  <img src="./img/logo_w.svg" alt="Ardenis">
+                </a>-->
+
+                <div class="contacts footer__contacts">
+                    <a href="tel:+380965664546" class="contacts__phone">+38(096)5664546</a>
+                    <a href="email:dreamwinamounts@gmail.com" class="contacts__email">dreamwinamounts@gmail.com</a>
+                </div>
+                <ul class="menu-social">
+                    <li class="menu-social__item">
+                        <a href="" class="menu-social__link facebook">
+                            <svg class="instagram-logo">
+                                <use xlink:href="./img/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-social__item">
+                        <a href="" class="menu-social__link reddit">
+                            <svg class="instagram-logo">
+                                <use xlink:href="./img/sprite.svg#reddit"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-social__item">
+                        <a href="" class="menu-social__link instagram">
+                            <svg class="instagram-logo">
+                                <use xlink:href="./img/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="copy">
+                    <p>&copy;qmpwwsd</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+
+    <script>
+        function isScrolledIntoView(elem) {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+
+            var elemTop = $(elem).offset().top;
+            var elemBottom = elemTop + $(elem).height();
+
+            return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        }
+        /*
+              $(window).scroll(function (e) {
+                var anchors = $('section');
+                for (var i = 0; i < anchors.length; ++i) {
+                  if (isScrolledIntoView(anchors[i])) {
+                    var href = $(anchors[i]).attr('id');
+                    location.hash = href.slice(href.indexOf('#') + 1);
+                    break;
+                  }
+                }
+              });*/
+        /*
+              $(function () {
+                var hash = location.hash;
+                if (hash) {
+                  // Scroll to the element with the given hash.
+                  var anchors = $('.section');
+                  for (var i = 0; i < anchors.length; ++i) {
+                    if ($(anchors[i]).attr('id') === hash) {
+                      $(window).scrollTop($(anchors[i]).offset().top);
+                      break;
+                    }
+                  }
+                }
+              });*/
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $('.customer-logos').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }]
+            });
+        });
+
+    </script>
+    <script>
+        var Menu = {
+
+            el: {
+                menuNav: $('.navigation'),
+                ham: $('.menu'),
+                menuTop: $('.menu-top'),
+                menuMiddle: $('.menu-middle'),
+                menuBottom: $('.menu-bottom')
+            },
+
+            init: function() {
+                Menu.bindUIactions();
+            },
+
+            bindUIactions: function() {
+                Menu.el.ham
+                    .on(
+                        'click',
+                        function(event) {
+                            Menu.activateMenu(event);
+                            event.preventDefault();
+                        }
+                    );
+            },
+
+            activateMenu: function() {
+                Menu.el.menuTop.toggleClass('menu-top-click');
+                Menu.el.menuMiddle.toggleClass('menu-middle-click');
+                Menu.el.menuBottom.toggleClass('menu-bottom-click');
+                /*
+                          Menu.el.menuNav.toggleClass('menu-open');
+                */
+            }
+        };
+
+        Menu.init();
+    </script>
+
+<!--    <svg class="">
+        <use xlink:href="./img/svg/sprite.svg#009-flamingo"></use>
+    </svg>
+    <svg class="">
+        <use xlink:href="./img/svg/sprite.svg#004-dinosaur"></use>
+    </svg>-->
+
+</body>
+</html>

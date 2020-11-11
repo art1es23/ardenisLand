@@ -1,23 +1,2689 @@
 @import "helpers/reset"
 @import "helpers/mixins"
 
-*, *:before, *:after
-  box-sizing: border-box
+$black: #222831
+$white: #ffffff
+$lightGrey: #eeeeee
+$badBlue: #4f8a8b
+$yellow: #fbd46d
+$orange: #e65c00
+$red: #FF0043
+$transition: all 0.3s ease
+
+@keyframes fade
+  from
+    width: 0
+  to
+    width: 100%
+
+@keyframes fadeHide
+  from
+    width: 100%
+  to
+    width: 0
+
+@keyframes show
+  from
+    transform: translateY(-100%)
+    opacity: 0
+  to
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes hide
+  from
+    transform: translateY(0)
+    opacity: 1
+  to
+    opacity: 0
+    transform: translateY(100%)
+
+*,
+*::before,
+*::after
   margin: 0
   padding: 0
+  box-sizing: border-box
+  cursor: none
 
 body
-  display: flex
-  align-items: center
-  justify-content: center
+  font-family: Raleway
+  font-weight: 500
+  letter-spacing: 1.15px
   color: black
+
+svg
+  width: 100%
+  height: 100%
 
 a
   text-decoration: none
+  color: white
+  transition: $transition
+  &:hover,
+  &:focus
+    color: $orange
+    cursor: none
 
-ul
-  list-style: none
+picture
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+p
+  line-height: 2rem
+
+.link
+  color: white
+  width: 60%
+  text-align: center
+  transition: $transition
+  font-size: 1.35vw
+  position: relative
+  display: block
+  border-bottom: 2px solid $orange
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    height: 5%
+    width: 0
+    bottom: 0
+    left: 0
+    background-color: $orange
+    z-index: 2
+    animation: fadeHide 0.5s ease-in-out forwards
+
+  &:hover,
+  &:focus
+    color: white
+    span
+      color: white
+      position: relative
+      z-index: 3
+    &:before
+      animation: fade 1s ease-in-out forwards
+
+.header
+  height: 120vh
+  padding: 7.5% 0
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  background-color: black
+  color: white
+  position: relative
+
+.navigation-wrapper
+  position: absolute
+  top: 0
+  left: 0
+  background-color: black
+  padding: 0 12.5%
+  display: flex
+  width: 100%
+  margin: 0 auto
+  height: 7rem
+  justify-content: space-between
+  align-items: center
+  z-index: 1000
+
+.logo
+  width: 25%
+  height: 80%
+  padding: 1rem 0
+
+  img
+    width: 100%
+    height: 100%
+
+.menu
+  display: none
+.navigation
+  display: flex
+  width: 80%
+  margin: 0 auto
+  height: 100%
+  justify-content: space-between
+  transition: all 2.5s ease-in-out
+
+  &__item
+    height: inherit
+    width: 100%
+    list-style: none
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__link
+    position: relative
+    width: 100%
+    padding: 1rem
+    color: white
+    text-align: center
+    font-size: 1.15vw
+    font-weight: 600
+
+    &:before
+      content: ''
+      display: block
+      width: 0
+      height: 100%
+      top: 0
+      left: 0
+      background-color: $orange
+      position: absolute
+      z-index: 2
+      animation: fadeHide 0.5s ease-in-out forwards
+
+    &:hover,
+    &:focus
+      color: white
+      span
+        color: white
+        position: relative
+        z-index: 3
+      &:before
+        animation: fade 1s ease-in-out forwards
+
+.contacts
+  display: flex
+  flex-direction: column
+  width: 25%
+  height: 100%
+  text-align: right
+  justify-content: center
+  align-items: flex-end
+  font-size: 1vw
+  margin-left: 1.5rem
+
+.hero
+  display: flex
+  width: 50%
+  height: 100%
+  flex-direction: column
+  padding: 5% 12.5%
+  z-index: 5
+  justify-content: space-between
+
+  &__title
+    font-size: 3.75vw
+    line-height: 5.25rem
+    font-family: Raleway-ExtraBold
+    &:first-letter
+      font-size: 4.5vw
+      color: $orange
+
+  &__slides
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 15rem
+    margin:
+      bottom: auto
+      top: 10%
+
+  &__caption
+    font-size: 1.6vw
+    padding: 2rem 0
+    color: $orange
+
+  &__description
+    font-size: 1.15vw
+    padding: 2rem 0
+    line-height: 2rem
+    align-items: flex-end
+
+  &__link
+    padding: 1.5rem 2rem
+    justify-self: flex-end
 
 
+.parallax
+  position: relative
+  width: 50%
+  height: inherit
+
+  &-background
+    position: absolute
+    right: 10%
+    top: 0
+    width: 100%
+    transform: scale(1.05)
+    height: auto
+    transition: $transition
+    img
+      width: 100%
+      height: 100%
+
+.main-content
+  width: 100%
+
+.container
+  width: inherit
+  height: inherit
+  padding: 0 15%
+
+.section
+  margin: 10% 0
+
+.services-group
+  position: relative
+  width: 100%
+  display: flex
+  flex-direction: column
+
+  &__title
+    font-size: 3.5vw
+    width: 67.5%
+    padding: 2rem 0
+    position: relative
+    &:first-letter
+      color: $orange
+      font-size: 5.25vw
+
+  &-wrapper
+    width: 100%
+    height: auto
+    display: grid
+    grid-gap: 3rem
+    grid-template-columns: repeat(2, 1fr)
+
+  &__item
+    display: flex
+    flex-direction: column
+    width: 100%
+    padding: 3.5rem
+    justify-content: space-between
+    transition: $transition
+    opacity: 0
+
+    &:first-child
+      grid-column: 1/3
+      padding-right: 55%
+
+.services
+  background:
+    color: $lightGrey
+    image: linear-gradient(to top, #ece9e6, #ffffff)
+  border-radius: 5px
+  position: relative
+  overflow: hidden
+  transition: $transition
+
+  &:first-child
+    .services__icon
+      display: none
+
+    &:hover,
+    &:focus
+      overflow: visible
+
+      .video-wrapper
+        animation: show 1s ease forwards
+
+  &__icon
+    width: 7.5rem
+    height: 7.5rem
+    background:
+      size: contain
+      position: center
+      repeat: no-repeat
+
+  &__title
+    padding: 2rem 0
+    font-size: 2vw
+    display: flex
+    position: relative
+    font-weight: 600
+
+    &:after
+      display: block
+      content: ''
+      width: 20%
+      height: 2px
+      left: 0
+      bottom: 15%
+      background-color: $orange
+      position: absolute
+
+  &__description
+    font-size: 1.1vw
+    width: 100%
+
+  &__list-menu
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin: 1.5rem 0
+
+    li
+      list-style: inside
+      padding: 0.75rem 0
+      font-size: 1vw
+
+  &__link
+    background:
+      color: $yellow
+      image: linear-gradient(to right, #ffe259, #ffa751)
+    border-radius: 5px
+    -webkit-backface-visibility: hidden
+    z-index: 1
+    padding: 1.25rem 2.5rem
+    width: 50%
+    text-align: center
+    transition: $transition
+    position: relative
+    border: none
+    span
+      color: black
+      font-size: 1.75rem
+      transition: $transition
+
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      border-radius: 5px
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      box-shadow: 0 5px 35px 1px rgba(255, 180, 0, 0.5)
+      background: linear-gradient(to right, #e65c00, #f9d423)
+      transition: all 1s ease-out
+      z-index: 2
+      opacity: 0
+
+    &:hover,
+    &:focus
+      span
+        position: relative
+        color: white
+        z-index: 3
+
+      &:after
+        opacity: 1
+
+.video_show
+  animation: show 1s ease forwards
+
+.video-wrapper
+  transition: all 1s ease
+  animation: hide 1s ease
+  transform: translateY(-100%)
+  position: absolute
+  top: -10%
+  right: 10%
+  width: 25rem
+  height: 110%
+  overflow: hidden
+  display: flex
+  align-items: flex-end
+
+.video__photo-back
+  width: 100%
+  position: relative
+  height: 100%
+  overflow: hidden
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  background-color: black
+  border:
+    top-left-radius: 60px
+    top-right-radius: 60px
+
+  video
+    width: 97.5%
+    height: 90%
+    object-fit: cover
+
+  &:after
+    width: 100%
+    height: 100%
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    background:
+      image: url("../img/sites_preview.png")
+      position: center
+      repeat: no-repeat
+      size: 100% 100%
+    z-index: 5
+
+.works
+  width: 100%
+  display: flex
+  flex-direction: column
+
+  &__title
+    font-size: 4.25vw
+    font-weight: 600
+    padding: 2rem
+    &:first-letter
+      color: $orange
+
+  &-wrapper
+    display: flex
+
+  &__item
+    display: flex
+    flex-direction: column
+    padding: 1rem 1.5rem
+    width: 100%
+    opacity: 0
+    transition: $transition
+
+.works-group
+
+  &__preview
+    width: 100%
+    height: 27.5rem
+    background-color: aquamarine
+    background:
+      color: $lightGrey
+      position: center
+      size: 100%
+    transition: $transition
+    transform: scale(1)
+
+    &:hover,
+    &:focus
+      box-shadow: 0 0 20px 5px rgba(0,0,0,0.5)
+      transform: scale(1.1)
+      background-size: 110%
+
+    picture
+      width: 100%
+      height: 100%
+
+      img
+        width: 100%
+        height: 100%
+
+  &__title
+    font-size: 1.35vw
+    padding: 2rem 0
+    color: black
+    font-weight: 600
+    text-align: center
+    transition: $transition
+    &:hover,
+    &:focus
+      color: $orange
+
+  &__description
+    font-size: 1vw
+    text-align: justify
+
+.stages
+  width: 100%
+  padding:
+    top: 5%
+    left: 15%
+    right: 15%
+    bottom: 5%
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  background:
+    color: black
+  color: white
+  position: relative
+  overflow: hidden
+
+  &_top
+    display: flex
+    padding: 2rem 0
+    justify-content: space-between
+    align-items: center
+
+  &__title
+    font-size: 3.75vw
+    font-weight: 600
+    &:first-letter
+      color: $orange
+
+  &__link
+    width: 22.5%
+    padding: 1rem 2.5rem
+    font-size: 1.5vw
+    text-align: center
+    color: white
+
+.stages-navigation
+  display: flex
+  width: 100%
+  min-height: 5rem
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+
+  &__item
+    list-style: none
+    height: inherit
+    width: auto
+
+  &__link
+    display: block
+    width: 100%
+    padding: 1rem 0.5rem
+    text-align: center
+    font-size: 1.35vw
+    color: white
+    font-weight: bold
+    transition: $transition
+    position: relative
+
+    &:before
+      content: ''
+      display: block
+      width: 0
+      height: 100%
+      top: 0
+      left: 0
+      background-color: $orange
+      position: absolute
+      z-index: 2
+      animation: fadeHide 0.35s ease-in-out forwards
+
+    &:hover,
+    &:active,
+    &:focus
+      color: white
+
+      span
+        color: white
+        position: relative
+        z-index: 3
+
+      &:before
+        animation: fade 1s ease-in-out forwards
+
+.hero-stages
+  width: 100%
+  position: relative
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  justify-content: space-between
+  align-items: center
+  padding: 2.5rem 0
+  pointer-events: none
+  visibility: hidden
+  opacity: 0
+  display: none
+
+  &__title
+    font-weight: 600
+    font-size: 2.5vw
+    position: relative
+    padding-bottom: 1.75rem
+    &:after
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      content: ''
+      width: 15%
+      height: 2px
+      background-color: $orange
+
+  &__description
+    width: 100%
+    padding-right: 7.5rem
+
+  &__list-menu
+    display: flex
+    flex-direction: column
+    width: 100%
+    padding: 1rem 0 2.5rem
+
+  &__video
+    position: relative
+    width: 77.5%
+    height: 22.5rem
+    border-radius: 5px
+    overflow: hidden
+    background-color: transparent
+    transition: $transition
+    color: $orange
+
+    &:hover,
+    &:focus
+      transform: scale(1.1)
+      box-shadow: rgba(255, 255, 255, 0.26) 0px 10px 36px 0px, rgba(255, 255, 255, 0.16) 0px 0px 0px 1px
+
+    video
+      position: absolute
+      width: 100%
+      height: 100%
+      display: block
+      object-fit: contain
+      transition: $transition
+      transform: translateY(-100%)
+
+      &:first-child
+        transform: translate(0%, 0%)
+        opacity: 1
+        visibility: visible
+
+      &:hover,
+      &:focus
+        transform: scale(1)
+    picture
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: block
+      object-fit: contain
+      transition: $transition
+      transform: translateY(-100%)
+      &:first-child
+        transform: translate(0%, 0%)
+        opacity: 1
+        visibility: visible
+
+      &:hover,
+      &:focus
+        transform: scale(1)
+      img
+        width: 100%
+        height: 100%
+.stages-all
+  width: 100%
+  display: flex
+  position: relative
+  padding: 5% 0
+
+.stages-list
+  &__item
+    width: inherit
+    height: inherit
+
+    list-style-position: inside
+    list-style-type: square
+    transition: $transition
+    font-size: 1.25vw
+    text-align: justify
+    line-height: 2rem
+    padding:
+      top: 1rem
+      bottom: 1rem
+
+    &:hover,
+    &:focus
+      color: $orange
+
+
+.order-site
+  background-color: $yellow
+  width: 100%
+  height: 50vh
+
+  &__wrapper
+    display: flex
+    height: inherit
+    justify-content: space-between
+    align-items: center
+
+  &__title
+    font-size: 3.75vw
+    width: 100%
+    font-weight: 600
+
+  &__form
+    margin: 0 5rem
+    padding: 2.5rem
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    input
+      padding: 1.5rem 2rem
+      margin: 0.75rem 0
+      font-size: 1.35vw
+      border: 1px solid $orange
+      transition: $transition
+
+      &:hover
+        box-shadow: 0 1px 50px 0 $orange
+
+    input[type="button"]
+      margin: 1rem auto
+      padding: 1rem 2.5rem
+      background:
+        color: $yellow
+        image: linear-gradient(to right, #ffe259, #ffa751)
+      border-radius: 5px
+      border: none
+      -webkit-backface-visibility: hidden
+      z-index: 1
+      box-shadow: 0 5px 50px 0 $orange
+      width: 50%
+      text-align: center
+      transition: $transition
+      position: relative
+      color: white
+      &:after
+        content: ''
+        position: absolute
+        display: block
+        border-radius: 5px
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        box-shadow: 0 5px 35px 1px rgba(255, 180, 0, 0.5)
+        background: linear-gradient(to right, #e65c00, #f9d423)
+        transition: all 1s ease-out
+        z-index: 2
+        opacity: 0
+
+      &:hover, &:focus
+        color: $black
+
+.phase
+  width: 100%
+
+  &__title
+    font-size: 3.5vw
+    width: 100%
+    font-weight: 600
+    &:first-letter
+      color: $orange
+  &__description
+    display: flex
+    justify-content: center
+    font-size: 1.5vw
+    text-align: center
+    width: 100%
+    margin-bottom: 10%
+    font-weight: bold
+  &-wrapper
+    width: 100%
+    display: flex
+    img
+      width: 100%
+      height: 100%
+
+@keyframes blur
+  from
+    opacity: 0
+    transform: scale(0.5)
+  to
+    opacity: 1
+    transform: scale(1)
+
+.faq
+  display: flex
+  width: 100%
+
+  &-wrapper
+    display: flex
+    flex-direction: column
+    background-color: black
+    width: 40%
+    color: white
+    padding: 5rem
+
+  &__title
+    font-size: 4.5vw
+    padding: 2rem 0
+    font-weight: 600
+
+  &-list
+    display: flex
+    justify-content: center
+    align-items: center
+    height: auto
+    width: 100%
+    position: relative
+
+    &__item
+      padding: 1.5rem 0
+      width: 80%
+      justify-content: center
+      align-items: center
+      text-align: justify
+      font-size: 1.5vw
+      position: absolute
+      opacity: 0
+      line-height: 3rem
+      pointer-events: none
+      left: 10%
+      right: 0
+      transform: translate(0, -40%)
+
+      p
+        line-height: 2.5rem
+
+.faq_active
+  visibility: visible
+  animation: blured 2s ease forwards
+  pointer-events: all
+  transition: $transition
+  display: block
+
+.faq-navigation
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 100%
+  height: 100%
+
+  &__item
+    width: inherit
+    padding: 1.5rem 0
+    font-size: 1.5vw
+    list-style: none
+    transition: $transition
+    &:hover,
+    &:focus
+      color: $orange
+
+
+.clients
+  width: 100%
+  height: 80vh
+  background-color: black
+  color: white
+
+  &__title
+    padding: 5rem 0
+    font-size: 4.25vw
+    font-weight: 600
+    &:first-letter
+      color: $orange
+
+  &-wrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    position: relative
+
+.footer
+  width: 100%
+  background-color: black
+  color: white
+
+  &-wrapper
+    min-height: 10rem
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+
+  &__logo
+    padding: 0.75rem
+    width: 12.5%
+    height: 100%
+    img
+      height: 90%
+      width: 100%
+
+  &__contacts
+    align-items: flex-start
+    text-align: left
+    width: 100%
+
+.copy
+  display: flex
+  justify-content: flex-end
+  width: 100%
+  font-size: 1.35vw
+  text-align: center
+
+.menu-social
+  width: 40%
+  margin: 0 auto
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &__item
+    margin: 0 auto
+    height: inherit
+    width: auto
+    list-style: none
+
+  &__link
+    display: block
+    text-align: center
+    width: 3.5rem
+    height: 3.5rem
+    font-size: 0
+    border-radius: 50%
+    background:
+      size: contain
+      position: center
+      repeat: no-repeat
+
+    &:hover,
+    &:focus
+      transform: scale(1.2)
+
+.show
+  opacity: 1
+
+.transform
+  transform: translateX(0)
+
+@keyframes position
+  from
+    opacity: 0
+    transform: translateY(-100%)
+
+  to
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes blured
+  0%
+    opacity: 0
+    transform: rotateX(90deg)
+  100%
+    opacity: 1
+    transform: rotateX(0)
+
+.navigation_fixed
+  position: fixed
+  width: 100%
+  height: 6rem
+  animation: position 0.5s ease forwards
+  top: 0
+  left: 0
+  right: 0
+  padding: 0 15%
+  justify-content: space-between
+  align-items: center
+  background-color: black
+  transition: $transition
+
+@keyframes move
+  from
+    transform: translate(-50%, 100%)
+    opacity: 0
+  to
+    opacity: 1
+    transform: translate(-50%, 0)
+
+.stages_active
+  visibility: visible
+  display: flex
+  animation: move 2.5s ease forwards
+  pointer-events: all
+  transition: $transition
+
+.customer-logos
+  width: 100%
+  height: 35vh
+  display: flex
+  align-items: center
+
+.slick-track
+  height: 35vh
+
+.slick-slide
+  margin: 0px 20px
+  display: none
+  float: left
+  height: 90%
+  min-height: 1px
+  border-radius: 50%
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    display: block
+  .slick-loading
+    img
+      display: none
+  .dragging
+    img
+      pointer-events: none
+
+.slick-slider
+  position: relative
+  display: flex
+  user-select: none
+  touch-action: pan-y
+  .slick-track,
+  .slick-list
+    transform: translate3d(0, 0, 0)
+
+.slick-list
+  position: relative
+  display: block
+  overflow: hidden
+  margin: 0
+  padding: 0
+  &:focus
+    outline: none
+  .dragging
+    cursor: no-drop
+
+.slick-track
+  position: relative
+  top: 0
+  left: 0
+  display: block
+  &:before,
+  &:after
+    display: flex
+    content: ''
+  &:after
+    clear: both
+
+.slick-loading
+  .slick-track
+    visibility: hidden
+  .slick-slide
+    visibility: hidden
+
+[dir='rtl'] .slick-slide
+  float: right
+
+.slick-initialized .slick-slide
+  display: block
+
+.slick-vertical .slick-slide
+  display: block
+  height: auto
+
+.slick-arrow.slick-hidden
+  display: none
+
+.cursor
+  pointer-events: none
+
+  &__ball
+    position: absolute
+    top: 0
+    left: 0
+    mix-blend-mode: difference
+    z-index: 9999
+
+  &__ball
+    circle
+      fill: $orange
+      color: white
+
+.more
+  width: 100%
+  background-color: black
+  color: white
+  padding: 5% 0
+  overflow: hidden
+
+  &-wrapper
+    width: inherit
+    height: 100%
+    display: flex
+    flex-direction: column
+
+  &__title
+    font-weight: 600
+    font-size: 3.5vw
+    &:first-letter
+      color: $orange
+
+  &-navigation
+    padding: 2rem
+    width: auto
+    justify-content: flex-start
+    align-items: center
+    display: flex
+
+    &__item
+      list-style: none
+      width: auto
+      height: 100%
+      color: white
+      text-align: center
+      font-size: 1.35vw
+      padding: 1rem 2.5rem
+      position: relative
+      font-weight: bold
+
+      &:before
+        content: ''
+        display: block
+        width: 0
+        height: 100%
+        top: 0
+        left: 0
+        background-color: $orange
+        position: absolute
+        z-index: 2
+        animation: fadeHide 0.5s ease-in-out forwards
+
+      &:hover,
+      &:focus
+        color: white
+        span
+          color: white
+          position: relative
+          z-index: 3
+        &:before
+          animation: fade 1s ease-in-out forwards
+
+  &-list
+    width: inherit
+    height: 75vh
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    position: relative
+
+    &__item
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: flex
+      visibility: hidden
+      opacity: 0
+      transform-origin: bottom left
+      animation: dropped 2s ease forwards
+
+      a
+        width: inherit
+        height: inherit
+        display: flex
+        align-items: center
+        justify-content: center
+
+        img
+          width: 95%
+          height: 100%
+
+.active
+  visibility: visible
+  transform-origin: top right
+  animation: blured 2.5s ease forwards
+  transition: all 0.5s ease
+  pointer-events: all
+
+.hero-stages__video-item
+  position: relative
+  top: 0
+  left: 0
+  transform: translateX(-50%)
+  justify-content: space-between
+  align-items: flex-start
+  pointer-events: none
+  visibility: hidden
+  opacity: 0
+  display: none
+
+.video-item--active
+  visibility: visible
+  opacity: 1
+  animation: position 1s ease forwards
+  transition: all 0.5s ease
+  pointer-events: all
+  left: 0
+  top: 0
+
+.modal
+  position: fixed
+  display: flex
+  top: 0
+  left: 0
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100vh
+  background-color: rgba($black, 0.9)
+  z-index: 9998
+  transform: translateY(-100%)
+  opacity: 0
+  visibility: hidden
+  transition: $transition
+
+  &__form
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 3.5rem 2rem
+    width: 50rem
+    border-radius: 15px
+    text-align: center
+    background-color: rgba($black, 0.85)
+    box-shadow: 0 0 30px 1px rgba($orange, 0.4)
+
+  &__title
+    padding-bottom: 2rem
+    color: white
+    font-size: 3.25rem
+    width: 80%
+
+  &__input
+    padding: 1.5rem 2rem
+    margin: 1rem 0
+    font-size: 1.35vw
+    border: 1px solid $orange
+    transition: $transition
+
+    &:hover
+      box-shadow: 0 1px 15px 0 $orange
+
+  &__btn
+    padding: 1rem 2.5rem
+    background:
+      color: $yellow
+      image: linear-gradient(to right, #ffe259, #ffa751)
+    border-radius: 5px
+    border: none
+    -webkit-backface-visibility: hidden
+    z-index: 1
+    width: 50%
+    text-align: center
+    transition: $transition
+    position: relative
+    color: $black
+    font-size: 2rem
+    margin-top: 2.5rem
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      border-radius: 5px
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      box-shadow: 0 5px 35px 1px rgba(255, 180, 0, 0.5)
+      background: linear-gradient(to right, #e65c00, #f9d423)
+      transition: all 1s ease-out
+      z-index: 2
+      opacity: 0
+
+    &:hover, &:focus
+      color: $white
+
+.btn--close
+  display: flex
+  text-align: center
+  width: 5rem
+  height: 5rem
+  background-color: transparent
+  transition: $transition
+  font-size: 3.5rem
+  border: none
+  justify-content: center
+  align-items: center
+  line-height: 4rem
+  position: absolute
+  top: 5%
+  left: 95%
+  color: white
+  transform: translateX(-95%)
+  &:hover
+    background-color: $orange
+
+.modal--active
+    visibility: visible
+    opacity: 1
+    transform: translateY(0)
+
+.scroll--hidden
+  overflow: hidden
+
+.btn--consultation
+  background-color: transparent
+  border:
+    left: none
+    right: none
+    top: none
+
+
+
+@media screen and (max-width: 1600px)
+  .logo
+    width: 15%
+
+  .section
+    margin: 7.5% 0
+
+  .header
+    height: 100vh
+    padding-bottom: 5%
+
+  .navigation
+    &__link
+      padding: 1rem 0.75rem
+  .container
+    padding: 0 10%
+
+  .hero
+    width: 60%
+    padding-bottom: 2.5%
+    &__title
+      font-size: 4vw
+      &:first-letter
+        font-size: 5vw
+
+    &__caption
+      font-size: 1.7vw
+
+  .parallax
+    width: 40%
+    &-background
+      right: 25%
+      top: 15%
+      transform: scale(1.3)
+      img
+        transform: translateY(10%)
+
+  .services-group
+    &__title
+      font-size: 3.5vw
+      padding-right: 1rem
+
+    &-wrapper
+      grid-gap: 4rem
+
+    &__item
+      padding: 4rem
+
+      &:first-child
+        padding-right: 55%
+
+  .services
+    &__icon
+      width: 7.5rem
+      height: 7.5rem
+
+    &__title
+      padding: 1.75rem 0
+      font-size: 2vw
+
+    &__description
+      font-size: 1.25vw
+      line-height: 2rem
+      text-align: justify
+      width: 100%
+
+    &__link
+      padding: 1.25rem 2rem
+    &__list-menu
+      margin: 1rem 0
+
+      li
+        list-style: inside
+        padding: 1rem 0
+        font-size: 1.15vw
+
+  .video-wrapper
+    width: 30rem
+    right: 5%
+
+  .works-group
+    &__preview
+      height: 27.5rem
+
+    &__title
+      font-size: 1.5vw
+    &__description
+      font-size: 1.1vw
+
+  .stages
+    padding:
+      left: 10%
+      right: 10%
+    &_top
+      padding: 2rem 0 1.5rem
+
+    &__title
+      font-size: 3.75vw
+
+    &__link
+      width: 25%
+
+  .stages-navigation
+    min-height: 4rem
+
+    &__link
+      padding: 1rem 0.5rem
+      font-size: 1.35vw
+
+  .hero-stages
+    width: 100%
+    padding: 0
+
+    &__title
+      font-size: 2.25vw
+
+    &__list-menu
+      padding: 2rem 0
+
+    &__video
+      height: 25rem
+      margin-right: 0
+
+  .stages-list
+    &__item
+      font-size: 1.35vw
+
+  .faq
+    &-wrapper
+      width: 40%
+
+    &__title
+      font-size: 4.25vw
+      padding: 2rem 0
+
+    &-list
+      &__item
+        padding: 1.5rem 0
+        font-size: 1.75vw
+        transform: translateY(-50%)
+
+  .faq-navigation
+    &__item
+      padding: 1rem 0
+
+  .customer-logos
+    height: 30vh
+
+  .slick-track
+    height: 30vh
+
+  .slick-slide
+    margin: 0 15px
+    height: 100%
+
+  .order-site
+    &__title
+      font-size: 4vw
+
+    &__form
+      margin: 0 3.5rem
+      padding: 2.5rem
+
+      input
+        padding: 1.25rem 1.75rem
+        font-size: 1.75vw
+
+      input[type="button"]
+        padding: 1rem 2rem
+
+  .contacts
+    font-size: 1.25vw
+
+  .menu-social
+    width: 35%
+
+  @media screen and (max-width: 1366px)
+    .hero
+      padding-bottom: 3%
+      &__title
+        font-size: 4.25vw
+        &:first-letter
+          font-size: 5.25vw
+
+      &__caption
+        font-size: 2.15vw
+
+      &__description
+        font-size: 1.35vw
+
+      &__link
+        font-size: 1.5vw
+        width: 40%
+        padding: 1rem
+
+    .services
+      &__list-menu
+        margin: 1rem 0
+        li
+          padding: 0.75rem 0
+
+      .video-wrapper
+        right: 0
+        width: 27.5rem
+
+    .works-group
+      &__preview
+        height: 22.5rem
+      &__title
+        padding: 1.5rem 0
+
+    .stages
+      &__link
+        width: 20%
+        padding: 1rem
+
+    .stages-list
+      &__item
+        padding: 0.35rem 0
+
+    .hero-stages
+      &__description
+        width: 50%
+        padding-right: 2.5rem
+      &__video
+        width: 60%
+        height: 22.5rem
+
+    .faq-list
+      &__item
+        font-size: 1.75vw
+        line-height: 2.5rem
+
+    .contacts
+      line-height: 1.75rem
+
+    .menu-social
+      width: 50%
+
+    .navigation_fixed
+      padding: 0 12.5%
+
+
+    @media screen and (max-width: 1224px)
+      .header
+        height: 100vh
+        padding-bottom: 0
+      .logo
+        width: 15%
+
+      .navigation
+        width: 60%
+        &-wrapper
+          width: 100%
+          padding: 0 5%
+        &__link
+          font-size: 1.4vw
+          padding: 1rem 1.25rem
+
+      .contacts
+        width: 20%
+        font-size: 1.1vw
+
+      .hero
+        padding: 7.5% 10% 7.5% 7.5%
+        &__title
+          font-size: 5.25vw
+          &:first-letter
+            font-size: 6.25vw
+        &__caption
+          font-size: 2.25vw
+        &__description
+          font-size: 1.65vw
+
+      .container
+        padding: 0 7.5%
+
+      .parallax
+        &-background
+          img
+            transform: translateY(15%)
+
+      .services-group
+        &__title
+          font-size: 3.5vw
+          width: 60%
+          padding: 0
+
+      .services
+        &__title
+          font-size: 2.3vw
+
+        &__description
+          font-size: 1.5vw
+
+        &__link
+          padding: 1rem
+          span
+            font-size: 1.75vw
+
+        &__list-menu
+          li
+            font-size: 1.5vw
+
+      .works-group
+        &__preview
+          height: 20rem
+        &__description
+          font-size: 1.15vw
+
+      .stages
+        padding:
+          left: 7.5%
+          right: 7.5%
+
+        &__link
+          width: 22.5%
+          font-size: 1.75vw
+
+      .hero-stages
+        width: 100%
+        &__title
+          font-size: 2.75vw
+        &__description
+          padding-right: 5rem
+          font-size: 1.5vw
+        &__video
+          height: 20rem
+
+      .stages-list
+        &__item
+          padding: 0.5rem 0
+          font-size: 1.4vw
+
+      .more
+        span
+          font-size: 1.25vw
+
+      .faq
+        &-wrapper
+          width: 45%
+          padding: 3.25rem
+
+        &__title
+          font-size: 4.5vw
+          padding: 1rem 0
+
+        &-list
+          &__item
+            width: 85%
+            left: 5%
+            font-size: 1.5vw
+
+      .faq-navigation
+        &__item
+          font-size: 1.75vw
+
+      .customer-logos
+        height: 30vh
+
+      .slick-track
+        height: 32.5vh
+
+      .order-site
+        &__title
+          font-size: 4vw
+        &__form
+          margin: 0
+          input
+            padding: 1.5rem 2.25rem
+            font-size: 1.6vw
+            margin: 0.5rem 0
+
+      .footer
+        .contacts
+          margin: 0
+          width: 100%
+          font-size: 1.25vw
+
+      .menu-social
+        width: 60%
+        justify-content: center
+
+      .copy
+        width: 100%
+        font-size: 1.25vw
+
+      .modal
+        &__form
+          width: 35rem
+        &__title
+          font-size: 2rem
+
+      @media screen and (max-width: 1024px)
+        body
+          cursor: auto
+        a
+          cursor: auto
+        .cursor
+          display: none
+
+        .contacts
+          font-size: 1.15vw
+          line-height: 1.25rem
+
+        .hero
+          width: 65%
+          z-index: 10
+          padding: 7.5% 7.5% 17.5%
+          &__title
+            font-size: 6vw
+            &:first-letter
+              font-size: 8vw
+
+          &__slides
+            width: 100%
+          &__caption
+            font-size: 3vw
+            padding: 0.75rem 0
+
+          &__description
+            font-size: 2.25vw
+
+          &__link
+            width: 50%
+            padding: 1rem 0.5rem
+            font-size: 1.75vw
+            border: 1px solid $orange
+
+        .parallax
+          position: absolute
+          top: 17.5%
+          right: 0
+          width: 65%
+          transform: translate(0, -20%)
+          &-background
+            right: 0
+            transform: scale(1)
+
+        .services-group
+          &__title
+            font-size: 4vw
+            width: 70%
+          &-wrapper
+            grid-gap: 1.5rem
+          &__item
+            padding: 2rem
+
+        .services
+          &:first-child
+            overflow: visible
+            padding-right: 50%
+            &:hover,
+            &:focus
+              .video-wrapper
+                animation: none
+                width: 22.5rem
+
+          &__title
+            font-size: 3vw
+          &__description
+            font-size: 1.65vw
+          &__link
+            width: 50%
+            span
+              font-size: 2vw
+
+          &__list-menu
+            li
+              width: 100%
+              font-size: 1.5vw
+
+          .video-wrapper
+            top: 0
+            right: 0
+            animation: none
+            height: 100%
+            width: 22.5rem
+
+        .works
+          &__title
+            font-size: 5vw
+          &-wrapper
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            justify-items: center
+
+        .works-group
+          padding: 1rem 2rem
+          width: 90%
+          text-align: center
+          align-items: center
+          display: flex
+          &__preview
+            width: 95%
+            height: 27.5rem
+
+          &__title
+            font-size: 3vw
+            padding: 1.5rem 0
+          &__description
+            font-size: 1.75vw
+
+        .stages
+          &__title
+            font-size: 4.5vw
+          &__link
+            width: 20%
+            padding: 1rem 1.5rem
+            border-bottom: 1px solid $orange
+
+        .stages-navigation
+          width: 100%
+          justify-content: center
+          &__item
+            margin: 0 1.25rem
+            position: relative
+            &:before
+              display: block
+              position: absolute
+              content: ''
+              width: 1px
+              height: 30%
+              top: 30%
+              left: 0
+              background-color: $orange
+              transform: translateY(15%)
+            &:after
+              display: block
+              position: absolute
+              content: ''
+              width: 1px
+              height: 30%
+              top: 30%
+              right: 0
+              background-color: $orange
+              transform: translateY(15%)
+          &__link
+            padding: 1rem 0.75rem
+            text-align: center
+            font-size: 2vw
+
+        .hero-stages
+          &__description
+            padding: 0
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 75%
+          &__title
+            font-size: 1.75rem
+            &:after
+              left: 50%
+              bottom: 10%
+              width: 50%
+              transform: translateX(-50%)
+          &__video
+            height: 15rem
+
+        .stages-list
+          padding: 0 1.5rem
+          width: 100%
+          &__item
+            width: 100%
+            font-size: 1.15rem
+
+        .phase
+          &__title
+            font-size: 4.5vw
+          &__description
+            font-size: 2vw
+
+        .more
+          &__title
+            font-size: 5vw
+          &-navigation
+            display: flex
+            width: 100%
+            padding: 2rem 0
+
+            &__item
+              width: 100%
+              padding: 0.75rem 0
+              position: relative
+
+              &:first-child
+                &:before
+                  display: none
+              &:last-child
+                &:after
+                  display: none
+
+              &:before
+                display: block
+                position: absolute
+                content: ''
+                width: 1px
+                height: 100%
+                top: 0
+                background-color: $orange
+
+              span
+                font-size: 1.5vw
+                position: relative
+                display: block
+                height: 100%
+                width: 100%
+                padding: 1rem
+
+        .more-list
+          height: 70vh
+
+        .faq
+          &-wrapper
+            padding: 3.5rem 2.5rem
+
+        .faq-navigation
+          &__item
+            font-size: 1.75vw
+        .clients
+          height: 60vh
+        .customer-logos
+          height: 25vh
+
+        .slick-track
+          height: 25vh
+
+        .menu-social
+          width: 60%
+
+        .modal
+          &__form
+            width: 40rem
+          &__title
+            font-size: 2.5rem
+          &__input
+            width: 70%
+          &__btn
+            font-size: 1.5rem
+
+        @media screen and (max-width: 768px)
+
+          .section
+            margin: 0
+
+          .navigation-wrapper
+            opacity: 1
+            padding: 0 10%
+            width: 100%
+
+            .contacts
+              display: none
+
+          .logo
+            width: 25%
+            display: flex
+
+          .navigation
+            transform: translateX(-100%)
+            visibility: hidden
+            opacity: 0
+            display: none
+            padding: 0
+            transition: all 1s ease-in
+            &__item
+              flex-grow: 1
+              height: calc((100vh - 10vh) / 10)
+            &__link
+              font-size: 1.5rem
+              display: flex
+              height: 100%
+              justify-content: center
+              align-items: center
+              padding: 0 2.5rem
+              opacity: 1
+              &:before, &:after
+                display: none
+              span
+                display: block
+
+          .navigation_open
+            display: flex
+            flex-direction: column
+            position: fixed
+            top: 0
+            left: 0
+            padding: 10% 0
+            width: 100%
+            height: 100vh
+            transition: $transition
+            animation: navOpen 0.5s ease-in forwards
+            .navigation
+              transform: translateX(0)
+              visibility: visible
+              opacity: 1
+              display: flex
+              flex-direction: column
+            .logo
+              height: 10vh
+              transform: scale(1.75)
+
+          @keyframes navOpen
+            0%
+              opacity: 0
+              transform: translateY(-100%)
+            100%
+              opacity: 1
+              transform: translateY(0)
+
+          .menu-open
+            display: flex
+            width: 100%
+            padding: 2.5rem 0
+            flex-direction: column
+
+          .menu
+            display: flex
+            flex-direction: column
+            position: relative
+            cursor: pointer
+            justify-self: flex-end
+            width: 5rem
+            padding: 1rem 1rem
+            height: 5rem
+            justify-content: center
+            z-index: 9999
+            transform-origin: center center
+            &-global
+              backface-visibility: hidden
+              margin: 0.25rem
+              border-top: 5px solid white
+              width: 100%
+              transition: $transition
+              left: 50%
+
+            &-top
+              top: 0
+              &-click
+                backface-visibility: hidden
+                width: 50px
+                bottom: 30%
+                left: -5%
+                position: absolute
+                transform-origin: center center
+                transform: rotate(140deg) translate(0%, 0%)
+                transition: $transition
+            &-middle
+              &-click
+                opacity: 0
+            &-bottom
+              top: 36px
+              &-click
+                backface-visibility: hidden
+                width: 50px
+                left: -5%
+                position: absolute
+                bottom: 0
+                top: 55%
+                transform-origin: center center
+                transform: rotate(40deg) translate(0, -50%)
+                transition: $transition
+
+          .header
+            height: 100vh
+
+          .hero
+            display: grid
+            grid-template-columns: repeat(2, auto)
+            grid-template-rows: repeat(2, auto)
+            align-items: center
+            grid-gap: 0
+            justify-content: center
+            width: 100%
+            background-color: rgba(0,0,0,0.35)
+            padding: 10% 7.5%
+
+            &__title
+              text-align: right
+              grid-column: 2/3
+              grid-row: 1/3
+              font-size: 8.5vw
+              &:first-letter
+                font-size: 11vw
+
+            &__slides
+              height: 100%
+              justify-content: flex-end
+              text-align: left
+              grid-column: 1/2
+              grid-row: 1/2
+              width: 100%
+              margin: auto
+            &__caption
+              font-size: 3.75vw
+            &__description
+              padding:
+                top: 2.5rem
+                bottom: 0
+              font-size: 2.25vw
+            &__link
+              padding: 1.5rem 0.75rem
+              grid-row: 2/3
+              grid-column: 1/2
+              width: 100%
+              font-size: 2.25vw
+              background-color: $orange
+              margin-bottom: 2.5rem
+
+          .parallax
+            height: 100%
+            top: 17.5%
+            width: 100%
+
+          .services-group
+            padding: 7.5% 0
+            &__title
+              text-align: center
+              font-size: 5.5vw
+              width: 100%
+              &:first-letter
+                font-size: 7.5vw
+            &-wrapper
+              grid-gap: 1.5rem
+            &__item
+              padding: 1.5rem
+
+          .services-group
+            &-wrapper
+              grid-template-columns: repeat(1, auto)
+
+            &__item
+              padding: 3.5rem 5rem
+              &:first-child
+                padding: 3.5rem 5rem
+                grid-column: 1/2
+
+                .services__icon
+                  display: flex
+
+          .services
+            &__icon
+              width: 7.5rem
+              height: 7.5rem
+            &__title
+              font-size: 4vw
+            &__description
+              font-size: 2.5vw
+            &__list-menu
+              li
+                font-size: 2.5vw
+            &__link
+              padding: 1.25rem 2rem
+              span
+                font-size: 3.25vw
+          .video-wrapper
+            display: none
+
+          .works
+            &__title
+              font-size: 6.5vw
+
+            &-wrapper
+              grid-template-columns: repeat(1, 1fr)
+              justify-items: center
+
+          .works-group
+            display: flex
+            padding: 2.5rem 0
+
+            &__title
+              font-size: 3.5vw
+
+            &__preview
+              width: 50%
+            &__description
+              font-size: 2.5vw
+              padding: 0 2rem
+
+          .stages
+            &__link
+              border: 1px solid $orange
+              padding: 1rem 0.5rem
+          
+          .hero-stages
+            flex-direction: column
+            text-align: center
+            justify-content: center
+            align-items: center
+            width: 95%
+
+            &__description
+              width: 100%
+
+            &__video
+              margin-top: 2.5rem
+              width: 100%
+              height: 25rem
+
+          .phase
+            padding: 7.5% 0
+          .more
+            min-height: auto
+
+          .more-navigation
+            &__item
+              span
+                font-size: 2vw
+
+          .more-list
+            height: 40vh
+
+          .faq
+            height: auto
+            display: flex
+            flex-direction: column
+            position: relative
+            &__title
+              font-size: 7.5vw
+            &-wrapper
+              background-color: white
+              width: 100%
+              color: black
+            &-navigation
+              &__item
+                font-size: 3vw
+            &-list
+              width: 100%
+              flex-direction: column
+              &__item
+                background-color: rgba(0,0,0,0.95)
+                color: white
+                transform: translate(0, 0)
+                position: relative
+                display: none
+                width: 100%
+                font-size: 2.5vw
+                padding: 2.5rem 5%
+                line-height: 2rem
+                top: 0
+                left: 0
+                height: auto
+
+            &_active
+              animation: blured 1s ease forwards
+              transform-origin: bottom right
+              display: flex
+
+          .clients
+            height: 50vh
+
+          .customer-logos
+            height: 20vh
+
+          .slick-list
+            height: 100%
+
+          .slick-track
+            height: 100%
+
+          .order-site
+            &__title
+              font-size: 5vw
+
+            input
+              font-size: 2.25vw
+              padding: 1.5rem
+
+            input[type="button"]
+              padding: 1rem 2.5rem
+              font-size: 2.75vw
+              width: 75%
+
+          .footer
+
+            &-wrapper
+              min-height: auto
+              padding: 2.5rem 0
+              flex-direction: column
+            .contacts
+              text-align: center
+              align-items: center
+              font-size: 2vw
+              line-height: 1.5rem
+
+          .menu-social
+            order: 1
+            padding: 1.25rem 0
+            width: 50%
+
+          .copy
+            padding: 1rem 0
+            font-size: 2vw
+            justify-content: center
+
+          .modal
+            &__form
+              width: 40rem
+            &__title
+              font-size: 2.5rem
+            &__input
+              width: 80%
+              font-size: 1.5rem
+            &__btn
+              font-size: 1.5rem
+
+          @media screen and (max-width: 480px)
+
+            .section
+              margin: 0
+
+            .header
+              height: 100vh
+
+            .navigation_open
+              .logo
+                transform: scale(1.25)
+
+            .hero
+              display: flex
+              align-items: center
+              justify-content: center
+              width: 100%
+              padding: 22.5% 5%
+
+              &__title
+                text-align: center
+                line-height: 3.5rem
+                font-size: 3rem
+                &:first-letter
+                  font-size: 3.5rem
+              &__slides
+                justify-content: center
+                text-align: center
+
+              &__caption
+                font-size: 1.75rem
+              &__description
+                padding:
+                  top: 0
+                  bottom: 0
+                font-size: 1.1rem
+              &__link
+                padding: 1.5rem 0.5rem
+                width: 80%
+                line-height: 1rem
+                align-items: center
+                font-size: 1.15rem
+                margin-bottom: 0
+
+            .parallax
+              display: none
+
+            .services-group
+              width: 100%
+              &__title
+                text-align: center
+                font-size: 1.75rem
+                width: 100%
+                &:first-letter
+                  font-size: 2rem
+              &-wrapper
+                grid-gap: 2rem
+                padding: 0
+              &__item
+                padding: 1rem
+
+            .services-group
+              &-wrapper
+                grid-template-columns: repeat(1, auto)
+              &__item
+                padding: 1.5rem 1.25rem
+                &:first-child
+                  padding: 1.5rem 1.25rem
+                  .services__icon
+                    display: flex
+
+            .services
+              &__icon
+                width: 7.5rem
+                height: 7.5rem
+              &__title
+                font-size: 1.5rem
+              &__description
+                line-height: 1.25rem
+                font-size: 1rem
+              &__list-menu
+                li
+                  padding: 0.25rem
+                  font-size: 1rem
+              &__link
+                align-self: center
+                width: 60%
+                padding: 1rem 2rem
+                span
+                  font-size: 1.25rem
+
+            .video-wrapper
+              display: none
+
+            .works
+              &__title
+                padding: 2rem 0
+                font-size: 2.5rem
+
+              &-wrapper
+                grid-template-columns: repeat(1, 1fr)
+
+              &__item
+                padding: 1rem 0.25rem
+
+            .works-group
+              display: flex
+              width: 100%
+              &__preview
+                width: 100%
+              &__title
+                font-size: 1.65rem
+              &__description
+                font-size: 1rem
+                padding: 0
+
+            .stages
+              &_top
+                text-align: center
+              &__title
+                font-size: 2.25rem
+              &__link
+                display: none
+
+            .stages-navigation
+              &__item
+                margin: 0
+
+              &__link
+                font-size: 0.9rem
+                padding: 0.5rem
+
+            .hero-stages
+              width: 100%
+              &__list-menu
+                padding-right: 0
+
+              &__video
+                width: 100%
+                height: 12.5rem
+                margin-top: 1rem
+
+            .stages-list
+              padding: 0
+              &__item
+                font-size: 1.15rem
+            .phase
+              &__title
+                font-size: 1.75rem
+                text-align: center
+
+              &__description
+                margin: 0
+                font-size: 1rem
+
+            .more
+              &__title
+                font-size: 1.75rem
+            .more-navigation
+              flex-wrap: wrap
+              padding: 1rem 0
+              &__item
+                padding: 0.25rem 0
+                span
+                  font-size: 3vw
+
+            .more-list
+              height: 30vh
+              picture
+                img
+                  width: 100%
+
+            .faq
+              &__title
+                font-size: 2.5rem
+              &-wrapper
+                padding: 1.5rem
+              &-navigation
+                &__item
+                  font-size: 1.25rem
+              &-list
+                &__item
+                  font-size: 1rem
+
+            .faq_active
+              display: flex
+            .clients
+              height: auto
+              padding: 2rem 0
+              &__title
+                padding: 0 0 1.75rem
+                font-size: 1.75rem
+
+            .logo
+              height: auto
+              width: 40%
+
+            .order-site
+              padding: 5% 0
+              height: auto
+              &__wrapper
+                flex-direction: column
+                text-align: center
+
+              &__title
+                font-size: 1.75rem
+
+              &__form
+                padding: 1.5rem 0
+                input
+                  padding: 1.5rem 1rem
+                  margin: 0.25rem 0
+                  font-size: 1rem
+                  width: 90%
+
+                input[type="button"]
+                  margin: 1rem auto
+                  padding: 1.25rem 2.5rem
+                  width: 90%
+                  font-size: 1.25rem
+
+            .footer
+              &-wrapper
+                padding: 1.5rem 0
+              .contacts
+                font-size: 1rem
+            .copy
+              font-size: 1rem
+            .menu-social
+              width: 100%
+              padding: 1rem 4rem
+
+            .modal
+              &__form
+                height: 100%
+                width: 100%
+              &__title
+                font-size: 2rem
+              &__input
+                font-size: 1.15rem
+                width: 95%
+              &__btn
+                width: 95%
+                font-size: 1.25rem
+
+            .btn--close
+              display: flex
+              text-align: center
+              width: 3.5rem
+              height: 3.5rem
+              font-size: 3rem
+              justify-content: center
+              align-items: center
+              line-height: 3.5rem
+              position: absolute
+              top: 2.5%
+              left: 50%
+              color: white
+              transform: translateX(-50%)
+
+
+        @media screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape)
+          .contacts
+            font-size: 1.2vw
+        @media screen and (max-device-width: 767px) and (min-device-width: 320px) and (orientation: landscape)
+          .hero
+            padding: 5% 5% 2.5%
+            &__slides
+              justify-content: space-evenly
+            &__description
+              padding: 0
+            &__link
+              margin: 0
+
+          .parallax
+            display: none
+
+          .works
+            &-wrapper
+              grid-template-columns: repeat(2, 1fr)
+
+          .works-group
+            &__preview
+              height: 20rem
+              width: 80%
+            &__title
+              font-size: 1.5rem
+            &__description
+              padding: 0
+
+          .stages
+            &__title
+              font-size: 2.5rem
+            &__link
+              display: none
+
+          .stages-navigation
+            &__link
+              span
+                font-size: 1rem
+
+          .phase
+            &__description
+              margin: 0
+              font-size: 1.25rem
+
+          .more
+            min-height: auto
+
+          .more-list
+            height: 70vh
+            picture
+              width: 80%
+
+          .clients
+            height: auto
+            min-height: auto
+            padding: 5% 0 10%
+            &__title
+              padding: 2rem 0
+
+          .customer-logos
+            height: 40vh
+
+          .order-site
+            height: auto
 
 @import "helpers/fonts"
