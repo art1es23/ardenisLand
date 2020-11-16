@@ -32,38 +32,123 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/main.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/main.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/main.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/atlas.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/atlas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/cat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/displacement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/mario.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/mino.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/noise.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/brendbooks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/brendbooks.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/content3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/content3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/design1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/design1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/design2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/design2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/etap_site.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/etap_site.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/logotyps.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/logotyps.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/parallax_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/parallax_background.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-2552127.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-2552127.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-3771127.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-3771127.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-4709287.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-4709287.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-5180492.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-5180492.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-5473952.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-5473952.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-5474031.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-5474031.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-5474038.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/pexels-photo-5474038.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/progr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/progr.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/sites_preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/sites_preview.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/build/img/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/tileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/style.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/style.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/upakovka.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/upakovka.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/verstka.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/verstka.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/verstka2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/verstka2.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/js/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/atlas.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/atlas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/cat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/displacement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/mario.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/mino.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/noise.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/svg/004-dinosaur.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/svg/009-flamingo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/tileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/Pexels Videos 1093664.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/anKonk1.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/anKonk1.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/anKonk2.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/anKonk2.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/anKonk3.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/anKonk3.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/anKonk4.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/anKonk4.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/anSprosa.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/anSprosa.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/anSprosa2.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/anSprosa2.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/anSprosa3.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/anSprosa3.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/content.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/content.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/napovnenya.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/napovnenya.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/production ID_4761736.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/production ID_4761736.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/prototype.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/prototype.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/res/prototype2.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/build/res/prototype2.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/Hello, AMPs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/brendbooks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/brendbooks.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/content3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/content3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/design1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/design1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/design2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/design2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/etap_site.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/etap_site.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/logotyps.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/logotyps.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/parallax_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/parallax_background.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-2552127.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-2552127.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-3771127.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-3771127.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-4709287.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-4709287.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-5180492.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-5180492.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-5473952.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-5473952.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-5474031.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-5474031.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-5474038.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pexels-photo-5474038.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/progr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/progr.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/sites_preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/sites_preview.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/style.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/style.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/svg/logo_w.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/svg/symbols.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/upakovka.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/upakovka.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/verstka.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/verstka.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/verstka2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/verstka2.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/helpers/_fonts.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/helpers/_fonts.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/Pexels Videos 1093664.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/anKonk1.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/anKonk1.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/anKonk2.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/anKonk2.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/anKonk3.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/anKonk3.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/anKonk4.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/anKonk4.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/anSprosa.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/anSprosa.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/anSprosa2.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/anSprosa2.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/anSprosa3.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/anSprosa3.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/content.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/content.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/napovnenya.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/napovnenya.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/production ID_4761736.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/production ID_4761736.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/prototype.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/prototype.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/prototype2.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/prototype2.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/main.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +225,9 @@
       <workItem from="1605021240578" duration="353000" />
       <workItem from="1605022220992" duration="1934000" />
       <workItem from="1605024578803" duration="1930000" />
-      <workItem from="1605086633163" duration="3041000" />
+      <workItem from="1605086633163" duration="3687000" />
+      <workItem from="1605516424444" duration="8920000" />
+      <workItem from="1605531623014" duration="5245000" />
     </task>
     <servers />
   </component>
@@ -193,16 +280,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2587" y="138" width="585" height="801" key="find.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1603187550547" />
-    <state x="143" y="247" width="672" height="677" key="run.anything.popup" timestamp="1605011726169">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="286" y="247" width="1344" height="677" key="run.anything.popup" timestamp="1605534998585">
+      <screen x="0" y="0" width="3840" height="1080" />
     </state>
     <state x="143" y="247" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603380499595" />
+    <state x="286" y="247" width="1344" height="677" key="run.anything.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1605534998585" />
     <state x="143" y="247" width="672" height="677" key="run.anything.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605011726169" />
     <state x="2063" y="247" key="run.anything.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1603198635125" />
-    <state x="142" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1605011724554">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="284" y="237" width="1344" height="678" key="search.everywhere.popup" timestamp="1605534549526">
+      <screen x="0" y="0" width="3840" height="1080" />
     </state>
     <state x="142" y="237" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603380497818" />
+    <state x="284" y="237" width="1344" height="678" key="search.everywhere.popup/0.0.3840.1080@0.0.3840.1080" timestamp="1605534549526" />
     <state x="142" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1605011724554" />
     <state x="2062" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1603198634834" />
   </component>

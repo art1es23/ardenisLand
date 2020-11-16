@@ -17,7 +17,7 @@ fromTo(stages, 0.5, {x: - window.innerWidth, opacity: 0}, {x: 0, opacity: 1}).
 fromTo(faq, 0.5, {x: window.innerWidth}, {x: 0}).
 fromTo(faqNav, 1, {opacity: 0}, {opacity: 1}).
 fromTo(faqList, 1, {x: -window.innerWidth, opacity: 0}, {x: 0, opacity: 1}).
-fromTo(order, 0.25, {x: window.innerWidth, opacity: 0}, {x: 0, opacity: 1}).
+fromTo(order, 0.25, {x: window.innerWidth / 2, opacity: 0}, {x: 0, opacity: 1}, ).
 fromTo(orderTitle, 0.5, {y: -500, opacity: 0}, {y: 0, opacity: 1}).
 fromTo(orderForm, 1, {x: 500, opacity: 0}, {x: 0, opacity: 1});
 
@@ -29,6 +29,19 @@ menuToggle.addEventListener('click', function (e) {
         menuNav.classList.toggle('menu-open');
         nav.classList.toggle('navigation_open');
 })
+
+const heroSlides = document.querySelectorAll('.hero__slides');
+let currentSlide = 0;
+function nextSlide() {
+
+        heroSlides[currentSlide].className = 'hero__slides';
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        heroSlides[currentSlide].className = 'hero__slides hero__slides--active';
+        console.log(heroSlides[currentSlide].className);
+}
+
+slideInterval = setInterval(nextSlide, 5000);
+
 
 window.addEventListener('scroll', function (e) {
         let shiftY = window.pageYOffset;
@@ -174,40 +187,6 @@ closeBtn.addEventListener('click', (e) => {
                 }
         })
 })
-
-
-const $bigBall = document.querySelector('.cursor__ball-big');
-const $smallBall = document.querySelector('.cursor__ball-small');
-const $hoverables = document.querySelectorAll('.hoverable');
-
-// Listeners
-document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {if (window.CP.shouldStopExecution(0)) break;
-        $hoverables[i].addEventListener('mouseenter', onMouseHover);
-        $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-}
-// Move the cursor
-window.CP.exitedLoop(0);
-
-function onMouseMove(e) {
-        TweenMax.to($bigBall, .25, {
-                x: e.pageX - 15,
-                y: e.pageY - 15 });
-
-        TweenMax.to($smallBall, .05, {
-                x: e.pageX - 5,
-                y: e.pageY - 7 });
-}
-// Hover an element
-function onMouseHover() {
-        TweenMax.to($bigBall, .3, {
-                scale: 4 });
-}
-
-function onMouseHoverOut() {
-        TweenMax.to($bigBall, .3, {
-                scale: 1 });
-}
 
 /*const showBlock = (someArray, someItem, someActive) => {
 
