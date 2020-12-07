@@ -21,14 +21,30 @@ fromTo(order, 0.25, {x: window.innerWidth / 2, opacity: 0}, {x: 0, opacity: 1}, 
 fromTo(orderTitle, 0.5, {y: -500, opacity: 0}, {y: 0, opacity: 1}).
 fromTo(orderForm, 1, {x: 500, opacity: 0}, {x: 0, opacity: 1});
 
-
 let menuNav = document.querySelector('.navigation');
-let menuToggle = document.querySelector('.menu')
+let menuToggle = document.querySelector('.menu');
+let menuOpenIcon = menuToggle.querySelector('.menu-global');
+/*
+let menuCloseIcon = menuToggle.querySelector('.menu-global--close');
+*/
+
+let anchorLinks = document.querySelectorAll('.navigation .navigation__link');
 
 menuToggle.addEventListener('click', function (e) {
         menuNav.classList.toggle('menu-open');
         nav.classList.toggle('navigation_open');
+        menuOpenIcon.classList.toggle('menu-global--active');
+        document.body.classList.toggle('scroll--hidden')
 })
+
+anchorLinks.forEach(link =>
+    link.addEventListener('click', (e) => {
+            document.body.classList.remove('scroll--hidden');
+            menuNav.classList.toggle('menu-open');
+            nav.classList.toggle('navigation_open');
+            menuOpenIcon.classList.toggle('menu-global--active');
+    })
+)
 
 const heroSlides = document.querySelectorAll('.hero__slides');
 let currentSlide = 0;
@@ -37,7 +53,6 @@ function nextSlide() {
         heroSlides[currentSlide].className = 'hero__slides';
         currentSlide = (currentSlide + 1) % heroSlides.length;
         heroSlides[currentSlide].className = 'hero__slides hero__slides--active';
-        console.log(heroSlides[currentSlide].className);
 }
 
 slideInterval = setInterval(nextSlide, 5000);
@@ -180,6 +195,7 @@ window.onclick = function(event) {
 }
 
 closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         modalWrapper.forEach(item => {
                 if (e.target === item) {
                         item.classList.remove('modal--active');
@@ -187,6 +203,9 @@ closeBtn.addEventListener('click', (e) => {
                 }
         })
 })
+
+
+
 
 /*const showBlock = (someArray, someItem, someActive) => {
 
@@ -207,5 +226,7 @@ closeBtn.addEventListener('click', (e) => {
                 console.log(cItem);
         }
 }
+
+@media screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape)
 
 showBlock('.more-navigation__item', '.more-list__item', 'active');*/

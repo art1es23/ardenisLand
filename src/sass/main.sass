@@ -52,6 +52,7 @@ body
   letter-spacing: 1.15px
   color: black
   overflow-x: hidden
+  scroll-margin-top: 10vh
 
 svg
   width: 100%
@@ -65,6 +66,7 @@ a
   &:focus
     color: $orange
     cursor: none
+
 
 picture
   width: 100%
@@ -133,9 +135,10 @@ p
   z-index: 1000
 
 .logo
-  width: 25%
+  width: 15%
   height: 80%
   padding: 1rem 0
+
 
   img
     width: 100%
@@ -145,7 +148,7 @@ p
   display: none
 .navigation
   display: flex
-  width: 80%
+  width: 60%
   margin: 0 auto
   height: 100%
   justify-content: space-between
@@ -193,7 +196,7 @@ p
 .contacts
   display: flex
   flex-direction: column
-  width: 25%
+  width: 15%
   height: 100%
   text-align: right
   justify-content: center
@@ -217,14 +220,14 @@ p
   width: 50%
   height: 100%
   flex-direction: column
-  padding: 5% 12.5%
+  padding: 5% 10% 5% 12.5%
   z-index: 5
   justify-content: space-between
 
   &__title
     font-size: 5rem
     line-height: 5rem
-    font-family: Raleway-ExtraBold
+    font-family: Raleway-VariableFont_wght
     &:first-letter
       font-size: 6.5rem
       color: $orange
@@ -251,7 +254,7 @@ p
       height: 15rem
       position: relative
       padding: 0
-      margin-top: -30%
+      margin-top: -10%
 
   &__caption
     font-size: 2rem
@@ -295,6 +298,7 @@ p
   padding: 0 15%
 
 .section
+  scroll-margin-top: 80px
   margin: 10% 0
 
 .services-group
@@ -1135,18 +1139,34 @@ p
 .cursor
   pointer-events: none
   z-index: 9999
+  overflow: hidden
+  left: 0
+  top: 0
+  will-change: transform
+  mix-blend-mode: difference
+  position: fixed
+  width: 3.7rem
+  height: 3.7rem
+  border-radius: 50%
+  transform: translate(-50%, -50%)
 
   &__ball
     position: absolute
     top: 0
     left: 0
+    height: 100%
+    width: 100%
     mix-blend-mode: difference
     z-index: 9999
+    border-radius: 50%
 
   &__ball
     circle
       fill: $orange
       color: white
+
+    &-small
+      transform: translate(35%, 35%)
 
 .more
   width: 100%
@@ -1345,21 +1365,22 @@ p
 .btn--close
   display: flex
   text-align: center
-  width: 5rem
-  height: 5rem
+  width: 3.5rem
+  height: 3.5rem
   background-color: transparent
   transition: $transition
-  font-size: 3.5rem
+  font-size: 1.75rem
   border: none
   justify-content: center
   align-items: center
-  line-height: 4rem
+  line-height: 1.75rem
   position: absolute
   top: 5%
   left: 95%
   color: white
   transform: translateX(-95%)
   &:hover
+    border-radius: 5px
     background-color: $orange
 
 .modal--active
@@ -1378,7 +1399,6 @@ p
     top: none
 
 
-
 @media screen and (max-width: 1600px)
   .logo
     width: 15%
@@ -1391,23 +1411,55 @@ p
     padding-bottom: 5%
 
   .navigation
+    width: 50%
+    &-wrapper
+      padding: 0 10%
     &__link
       padding: 1rem 0.75rem
+      font-size: 1.25rem
+
+  .contacts
+    width: 20%
+    font-size: 1rem
+    margin: 0
+    &__phone
+      padding: 0.5rem 0
   .container
     padding: 0 10%
 
   .hero
-    width: 60%
-    padding-bottom: 2.5%
+    width: 57.5%
+    padding:
+      right: 12.5%
+      bottom: 2.5%
+      top: 2.5%
+    &__title
+      font-size: 4rem
+      &:first-letter
+        font-size: 5rem
+    &__slides
+      &--wrapper
+        height: 10rem
+        margin-top: 0
+    &__caption
+      font-size: 1.5rem
+      padding: 1.5rem 0
+    &__description
+      padding: 0.25rem 0
+      font-size: 1.25rem
+    &__link
+      width: 50%
+      font-size: 1.25rem
+      padding: 1.5rem 0.75rem
 
   .parallax
     width: 40%
     &-background
       right: 25%
-      top: 15%
-      transform: scale(1.3)
+      top: 10%
+      transform: scale(1.15)
       img
-        transform: translateY(10%)
+        transform: translateY(5%)
 
   .services-group
     &__title
@@ -1445,6 +1497,10 @@ p
     width: 30rem
     right: 5%
 
+  .works
+    &__title
+      font-size: 4rem
+
   .stages
     padding:
       left: 10%
@@ -1458,6 +1514,8 @@ p
 
     &__link
       width: 25%
+      font-size: 1.5rem
+      padding: 1rem 0.75rem
 
   .stages-navigation
     min-height: 4rem
@@ -1513,7 +1571,7 @@ p
 
   .order-site
     &__title
-      font-size: 4.5rem
+      font-size: 3.5rem
 
     &__form
       margin: 0 3.5rem
@@ -1527,11 +1585,26 @@ p
         padding: 1rem 2rem
 
   .menu-social
-    width: 35%
+    width: 20%
+  .copy
+    width: 20%
 
   @media screen and (max-width: 1366px)
+
+    .navigation
+      width: 52.5%
+      &-wrapper
+        padding: 0 10%
+      &__link
+        font-size: 1.1rem
+
+    .contacts
+      width: 20%
+      margin: 0
+      font-size: 1.1rem
+
     .hero
-      padding-bottom: 3%
+      padding: 5% 10% 3% 10%
       &__title
         font-size: 4.5rem
         &:first-letter
@@ -1545,6 +1618,14 @@ p
       &__slides
         &--wrapper
           margin-top: 0
+
+    .parallax
+      &-background
+        right: 25%
+        top: 10%
+        transform: scale(1.25)
+        img
+          transform: translateY(10%)
 
     .services
       padding: 2rem 3rem
@@ -1605,34 +1686,50 @@ p
       line-height: 1.75rem
 
     .menu-social
-      width: 50%
+      width: 20%
+
+    .copy
+      width: 25%
 
     .navigation_fixed
       padding: 0 12.5%
 
+    .modal
+      &__form
+        width: 45rem
+      &__title
+        font-size: 2.25rem
+      input
+        width: 60%
+        font-size: 1.5rem
 
     @media screen and (max-width: 1224px)
       .header
         height: 100vh
         padding-bottom: 0
-      .logo
-        width: 15%
 
       .navigation
-        width: 60%
+        width: 55%
         &-wrapper
           width: 100%
           padding: 0 5%
         &__link
-          font-size: 1.4vw
-          padding: 1rem 1.25rem
+          font-size: 1.05rem
 
       .contacts
-        width: 20%
-        font-size: 1.1vw
+        font-size: 1.05rem
 
       .hero
         padding: 7.5% 10% 7.5% 7.5%
+        &__title
+          font-size: 4rem
+          &:first-letter
+            font-size: 5rem
+
+        &__caption
+          font-size: 1.5rem
+        &__description
+          font-size: 1.25rem
 
       .container
         padding: 0 7.5%
@@ -1640,7 +1737,7 @@ p
       .parallax
         &-background
           img
-            transform: translateY(15%)
+            transform: translateY(15%) scale(1.05)
 
       .services-group
         &__title
@@ -1743,38 +1840,161 @@ p
         font-size: 1.25vw
 
       .modal
+        input
+          width: 80%
+          font-size: 1.5rem
+
         &__form
           width: 35rem
         &__title
           font-size: 2rem
 
       @media screen and (max-width: 1024px)
-        body
-          cursor: auto
-        a
-          cursor: auto
-        .cursor
-          display: none
 
-        .contacts
-          font-size: 1.15vw
-          line-height: 1.25rem
+        .navigation-wrapper
+          opacity: 1
+          padding: 0 5%
+          width: 100%
+          height: 6rem
+          animation: navClose 0.5s ease-in forwards
+
+          .contacts
+            display: none
+
+        .logo
+          width: 20%
+          display: flex
+
+        .navigation
+          transform: translateX(-100%)
+          visibility: hidden
+          opacity: 0
+          display: none
+          padding: 0
+          transition: all 1s ease-in
+          &__item
+            flex-grow: 1
+            height: calc((100vh - 10vh) / 10)
+          &__link
+            font-size: 1.5rem
+            display: flex
+            height: 100%
+            justify-content: center
+            align-items: center
+            padding: 0 2.5rem
+            opacity: 1
+            &:before, &:after
+              display: none
+            span
+              display: block
+
+        .navigation_open
+          display: flex
+          flex-direction: column
+          position: fixed
+          top: 0
+          left: 0
+          padding: 10% 0
+          width: 100%
+          height: 100vh
+          transition: $transition
+          animation: navOpen 0.5s ease-in forwards
+          .navigation
+            transform: translateX(0)
+            visibility: visible
+            opacity: 1
+            display: flex
+            flex-direction: column
+          .logo
+            height: 10vh
+          .menu
+            height: 3.5rem
+            width: 3.5rem
+            padding: 0.25rem
+
+        @keyframes navOpen
+          0%
+            opacity: 0
+            transform: translateY(-100%)
+          100%
+            opacity: 1
+            transform: translateY(0)
+
+        @keyframes navClose
+          0%
+            opacity: 0
+            height: 100vh
+            transform: translateY(-100%)
+          50%
+            opacity: 1
+            height: 50vh
+          100%
+            transform: translateY(0)
+            height: 6rem
+
+        .menu-open
+          display: flex
+          width: 100%
+          padding: 2.5rem 0
+          flex-direction: column
+
+        .menu
+          display: flex
+          flex-direction: column
+          position: relative
+          cursor: pointer
+          width: 2.5rem
+          height: 2.5rem
+          align-items: center
+          justify-content: center
+          z-index: 9999
+          transform-origin: center center
+
+        .menu-global
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          display: flex
+          width: 100%
+          height: 100%
+          transition: $transition
+          background:
+            image: url('../img/menuOpen.png')
+            position: center
+            repeat: no-repeat
+            size: cover
+
+          &--active
+            width: 80%
+            height: 80%
+            background:
+              image: url('../img/menuClose.png')
 
         .hero
           width: 65%
           z-index: 10
-          padding: 7.5% 7.5% 17.5%
+          padding: 7.5% 5% 7.5%
+          justify-content: space-evenly
+          &__title
+            width: 75%
+            line-height: 3.75rem
+            font-size: 3.75rem
+            &:first-letter
+              font-size: 4.5rem
           &__slides
-            width: 100%
-            margin-top: 0
+            &--wrapper
+              height: 10rem
+              width: 85%
           &__caption
-            padding: 0.75rem 0
-
+            padding: 1rem 0
+          &__description
+            padding: 1rem 0
           &__link
-            width: 50%
             padding: 1rem 0.5rem
-            font-size: 1.75vw
             border: 1px solid $orange
+            width: 50%
+            font-size: 2vw
 
         .parallax
           position: absolute
@@ -1835,7 +2055,7 @@ p
             justify-items: center
 
         .works-group
-          padding: 1rem 2rem
+          padding: 1rem
           width: 90%
           text-align: center
           align-items: center
@@ -1855,8 +2075,9 @@ p
           &__title
             font-size: 4.5vw
           &__link
-            width: 20%
-            padding: 1rem 1.5rem
+            width: 22.5%
+            padding: 1rem
+            font-size: 1.15rem
             border-bottom: 1px solid $orange
 
         .stages-navigation
@@ -1906,6 +2127,11 @@ p
               transform: translateX(-50%)
           &__video
             height: 15rem
+            &:hover,
+            &:focus,
+            &:active
+              transform: scale(1.25)
+
 
         .stages-list
           padding: 0 1.5rem
@@ -1989,126 +2215,23 @@ p
             font-size: 1.5rem
 
         @media screen and (max-width: 768px)
+          body
+            cursor: auto
+          a
+            cursor: auto
+          .cursor
+            display: none
 
           .section
             margin: 0
-
-          .navigation-wrapper
-            opacity: 1
-            padding: 0 10%
-            width: 100%
 
             .contacts
               display: none
 
           .logo
-            width: 25%
+            width: 30%
+            transform: scale(1.25)
             display: flex
-
-          .navigation
-            transform: translateX(-100%)
-            visibility: hidden
-            opacity: 0
-            display: none
-            padding: 0
-            transition: all 1s ease-in
-            &__item
-              flex-grow: 1
-              height: calc((100vh - 10vh) / 10)
-            &__link
-              font-size: 1.5rem
-              display: flex
-              height: 100%
-              justify-content: center
-              align-items: center
-              padding: 0 2.5rem
-              opacity: 1
-              &:before, &:after
-                display: none
-              span
-                display: block
-
-          .navigation_open
-            display: flex
-            flex-direction: column
-            position: fixed
-            top: 0
-            left: 0
-            padding: 10% 0
-            width: 100%
-            height: 100vh
-            transition: $transition
-            animation: navOpen 0.5s ease-in forwards
-            .navigation
-              transform: translateX(0)
-              visibility: visible
-              opacity: 1
-              display: flex
-              flex-direction: column
-            .logo
-              height: 10vh
-              transform: scale(1.75)
-
-          @keyframes navOpen
-            0%
-              opacity: 0
-              transform: translateY(-100%)
-            100%
-              opacity: 1
-              transform: translateY(0)
-
-          .menu-open
-            display: flex
-            width: 100%
-            padding: 2.5rem 0
-            flex-direction: column
-
-          .menu
-            display: flex
-            flex-direction: column
-            position: relative
-            cursor: pointer
-            justify-self: flex-end
-            width: 5rem
-            padding: 1rem 1rem
-            height: 5rem
-            justify-content: center
-            z-index: 9999
-            transform-origin: center center
-            &-global
-              backface-visibility: hidden
-              margin: 0.25rem
-              border-top: 5px solid white
-              width: 100%
-              transition: $transition
-              left: 50%
-
-            &-top
-              top: 0
-              &-click
-                backface-visibility: hidden
-                width: 50px
-                bottom: 30%
-                left: -5%
-                position: absolute
-                transform-origin: center center
-                transform: rotate(140deg) translate(0%, 0%)
-                transition: $transition
-            &-middle
-              &-click
-                opacity: 0
-            &-bottom
-              top: 36px
-              &-click
-                backface-visibility: hidden
-                width: 50px
-                left: -5%
-                position: absolute
-                bottom: 0
-                top: 55%
-                transform-origin: center center
-                transform: rotate(40deg) translate(0, -50%)
-                transition: $transition
 
           .header
             height: 100vh
@@ -2121,7 +2244,11 @@ p
             padding: 10% 7.5%
 
             &__title
-              font-size: 4.5rem
+              font-size: 4rem
+              line-height: 4rem
+              text-align: center
+              &:first-letter
+                font-size: 5.5rem
 
             &__slides
               height: 100%
@@ -2154,7 +2281,7 @@ p
 
           .parallax
             height: 100%
-            top: 17.5%
+            top: 15%
             width: 100%
 
           .services-group
@@ -2360,16 +2487,23 @@ p
             .header
               height: 100vh
 
+            .logo
+              transform: scale(1)
+              height: 100%
+
             .navigation_open
+              padding: 17.5% 0
               .logo
                 transform: scale(1.25)
+              .menu-open
+                padding: 5% 0
 
             .hero
               display: flex
               align-items: center
-              justify-content: center
+              justify-content: space-evenly
               width: 100%
-              padding: 22.5% 5%
+              padding: 10% 5%
 
               &__title
                 text-align: center
@@ -2615,19 +2749,117 @@ p
               color: white
               transform: translateX(-50%)
 
-
-        @media screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape)
-          .contacts
-            font-size: 1.2vw
         @media screen and (max-device-width: 767px) and (min-device-width: 320px) and (orientation: landscape)
+
+          .navigation-wrapper
+            opacity: 1
+            padding: 0 5%
+            width: 100%
+            height: 3.5rem
+
+          .navigation
+            transform: translateX(-100%)
+            visibility: hidden
+            opacity: 0
+            display: none
+            padding: 0
+            transition: all 1s ease-in
+            &__item
+              flex-grow: 1
+              height: calc((100vh - 10vh) / 10)
+            &__link
+              font-size: 1.5rem
+              display: flex
+              height: 100%
+              justify-content: center
+              align-items: center
+              padding: 0 2.5rem
+              opacity: 1
+              &:before, &:after
+                display: none
+              span
+                display: block
+
+          .navigation_open
+            display: flex
+            flex-direction: column
+            position: fixed
+            top: 0
+            left: 0
+            padding: 7.5% 0
+            width: 100%
+            height: 100vh
+            transition: $transition
+            animation: navOpen 0.5s ease-in forwards
+            .navigation
+              transform: translateX(0)
+              visibility: visible
+              opacity: 1
+              display: flex
+              flex-direction: column
+            .logo
+              padding: 0.5rem 0
+            .menu-global
+              width: 70%
+
+          .menu-open
+            display: flex
+            width: 100%
+            padding: 0
+            flex-direction: column
+
+          .menu
+            display: flex
+            flex-direction: column
+            position: relative
+            cursor: pointer
+            justify-self: flex-end
+            width: 3.5rem
+            padding: 0 0.5rem
+            height: 3.5rem
+            justify-content: center
+            z-index: 9999
+            transform-origin: center center
+            &-global
+              backface-visibility: hidden
+              border-top: 5px solid white
+              width: 100%
+              transition: $transition
+              left: 0
+
+          &-top
+            &-click
+              bottom: 30%
+              left: -5%
+          &-bottom
+            &-click
+              left: -5%
+              top: 55%
+
+          .header
+            height: 100vh
+            padding-bottom: 5%
+
           .hero
-            padding: 5% 5% 2.5%
+            padding: 2.5% 5% 2.5%
+            &__title
+              font-size: 2.75rem
+              &:first-letter
+                font-size: 3.5rem
             &__slides
               justify-content: space-evenly
+              padding: 1rem 2rem
+            &__caption
+              padding: 0
+              font-size: 1.25rem
             &__description
               padding: 0
+              font-size: 1rem
             &__link
               margin: 0
+              line-height: 1.25rem
+              font-size: 1.25rem
+              padding: 1rem 0.5rem
 
           .parallax
             display: none
@@ -2656,6 +2888,9 @@ p
               span
                 font-size: 1rem
 
+          .hero-stages__video
+            height: 22.5rem
+
           .phase
             &__description
               margin: 0
@@ -2681,5 +2916,17 @@ p
 
           .order-site
             height: auto
+
+          .modal
+            &__form
+              height: 100vh
+              width: 100vw
+              padding: 1rem 0
+
+            &__title
+              padding-bottom: 1rem
+            &__btn
+              margin-top: 1rem
+              width: 35%
 
 @import "helpers/fonts"
